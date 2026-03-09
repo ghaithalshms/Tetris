@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "67CDyZYay3M=",
+  "dgSpecHash": "86YRf3fjxT4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\alsha\\Documents\\2025-2026\\Complement_de_programmation\\Projet\\Iteration1\\Tetris\\TestTetris\\TestTetris.csproj",
+  "projectFilePath": "C:\\Users\\alsha\\Documents\\2025-2026\\Complement_de_programmation\\Projet\\Tetris\\TestTetris\\TestTetris.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alsha\\.nuget\\packages\\coverlet.collector\\6.0.4\\coverlet.collector.6.0.4.nupkg.sha512",
     "C:\\Users\\alsha\\.nuget\\packages\\microsoft.codecoverage\\17.14.1\\microsoft.codecoverage.17.14.1.nupkg.sha512",

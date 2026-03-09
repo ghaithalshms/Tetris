@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alsha\\Documents\\2025-2026\\Complement_de_programmation\\Projet\\Iteration1\\Tetris\\InterfaceTetris\\InterfaceTetris.csproj": {}
+    "C:\\Users\\alsha\\Documents\\2025-2026\\Complement_de_programmation\\Projet\\Tetris\\InterfaceTetris\\InterfaceTetris.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alsha\\Documents\\2025-2026\\Complement_de_programmation\\Projet\\Iteration1\\Tetris\\InterfaceTetris\\InterfaceTetris.csproj": {
+    "C:\\Users\\alsha\\Documents\\2025-2026\\Complement_de_programmation\\Projet\\Tetris\\InterfaceTetris\\InterfaceTetris.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alsha\\Documents\\2025-2026\\Complement_de_programmation\\Projet\\Iteration1\\Tetris\\InterfaceTetris\\InterfaceTetris.csproj",
+        "projectUniqueName": "C:\\Users\\alsha\\Documents\\2025-2026\\Complement_de_programmation\\Projet\\Tetris\\InterfaceTetris\\InterfaceTetris.csproj",
         "projectName": "InterfaceTetris",
-        "projectPath": "C:\\Users\\alsha\\Documents\\2025-2026\\Complement_de_programmation\\Projet\\Iteration1\\Tetris\\InterfaceTetris\\InterfaceTetris.csproj",
+        "projectPath": "C:\\Users\\alsha\\Documents\\2025-2026\\Complement_de_programmation\\Projet\\Tetris\\InterfaceTetris\\InterfaceTetris.csproj",
         "packagesPath": "C:\\Users\\alsha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alsha\\Documents\\2025-2026\\Complement_de_programmation\\Projet\\Iteration1\\Tetris\\InterfaceTetris\\obj\\",
+        "outputPath": "C:\\Users\\alsha\\Documents\\2025-2026\\Complement_de_programmation\\Projet\\Tetris\\InterfaceTetris\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alsha\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\alsha\\Documents\\2025-2026\\Complement_de_programmation\\Projet\\Iteration1\\Tetris\\NoyauTetris\\NoyauTetris.csproj": {
-                "projectPath": "C:\\Users\\alsha\\Documents\\2025-2026\\Complement_de_programmation\\Projet\\Iteration1\\Tetris\\NoyauTetris\\NoyauTetris.csproj"
+              "C:\\Users\\alsha\\Documents\\2025-2026\\Complement_de_programmation\\Projet\\Tetris\\NoyauTetris\\NoyauTetris.csproj": {
+                "projectPath": "C:\\Users\\alsha\\Documents\\2025-2026\\Complement_de_programmation\\Projet\\Tetris\\NoyauTetris\\NoyauTetris.csproj"
               }
             }
           }
@@ -365,14 +365,14 @@
         }
       }
     },
-    "C:\\Users\\alsha\\Documents\\2025-2026\\Complement_de_programmation\\Projet\\Iteration1\\Tetris\\NoyauTetris\\NoyauTetris.csproj": {
+    "C:\\Users\\alsha\\Documents\\2025-2026\\Complement_de_programmation\\Projet\\Tetris\\NoyauTetris\\NoyauTetris.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alsha\\Documents\\2025-2026\\Complement_de_programmation\\Projet\\Iteration1\\Tetris\\NoyauTetris\\NoyauTetris.csproj",
+        "projectUniqueName": "C:\\Users\\alsha\\Documents\\2025-2026\\Complement_de_programmation\\Projet\\Tetris\\NoyauTetris\\NoyauTetris.csproj",
         "projectName": "NoyauTetris",
-        "projectPath": "C:\\Users\\alsha\\Documents\\2025-2026\\Complement_de_programmation\\Projet\\Iteration1\\Tetris\\NoyauTetris\\NoyauTetris.csproj",
+        "projectPath": "C:\\Users\\alsha\\Documents\\2025-2026\\Complement_de_programmation\\Projet\\Tetris\\NoyauTetris\\NoyauTetris.csproj",
         "packagesPath": "C:\\Users\\alsha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alsha\\Documents\\2025-2026\\Complement_de_programmation\\Projet\\Iteration1\\Tetris\\NoyauTetris\\obj\\",
+        "outputPath": "C:\\Users\\alsha\\Documents\\2025-2026\\Complement_de_programmation\\Projet\\Tetris\\NoyauTetris\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alsha\\AppData\\Roaming\\NuGet\\NuGet.Config",
