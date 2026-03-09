@@ -1,0 +1,8 @@
+Ghaith : 
+public enum TetrinoCouleur
+public IBrush ConvertirCouleur(TetrinoCouleur couleur)
+public class JeuTetris
+Calculs TetrisCanvas.Width, TetrisCanvas.Height, Width et Height
+public void DessinerCadre()
+DessinerCarre
+DemarrerInterface

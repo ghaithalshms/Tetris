@@ -1,0 +1,4 @@
+jusqu'à Dessin du cadre : ghaith
+dessiner un carre : awa
+bouton demarrer : mael
+les tests : nathan
