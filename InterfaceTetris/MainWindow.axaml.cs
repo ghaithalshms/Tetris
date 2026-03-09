@@ -1,0 +1,209 @@
+/* Fichier MainWindow.axaml.cs
+ * Gère l'interface du jeu de Tetris : la fenêtre graphique et 
+ * l'ensemble des interactions du jeu.
+ * Auteur : Ghaith ALSHAMAS
+ * Version : 1.1
+ */
+
+using Avalonia;
+using Avalonia.Controls;
+using Avalonia.Input;
+using System;
+using Avalonia.Threading;
+// à ajouter à partir de l'itération 1
+using NoyauTetris;
+
+namespace InterfaceTetris;
+
+public enum TetrinoCouleur
+{
+    Aucune,   // case vide
+    Cadre,    // bordures
+    Bleu,
+    Jaune,
+    Rouge
+}
+
+
+
+
+/* Gère la fenêtre principale du jeu de Tetris, et l'ensemble des interactions du jeu. */
+public partial class MainWindow : Window
+{
+    /* Minuteur qui déclanche régulièrement un évènement. */
+    public DispatcherTimer Minuteur;
+    
+    public MainWindow()
+    {
+        InitializeComponent();
+        // Défini la taille de la fenêtre à partir des constantes
+        //LargeurFenetre =
+        //LargeurCanvas + 2×Cadre + 2×Marges
+        //= 264 + 24 + 80
+        //= 368 px
+        Width = 368;
+        //HauteurFenetre =
+        //330 + 24 + 80 + 40 + 40 + 40 + 40
+        Height = 594;
+        // Définit le texte de InfoText
+        InfoText.Text = "Zone de texte";
+        // Défini la taille du canvas à partir des constantes
+        // LargeurCanvas = LargeurGrille × 22
+        //       = 12 × 22
+        //       = 264 px
+        TetrisCanvas.Width = 264;
+        // HauteurCanvas = HauteurGrille × 22
+        //       = 15 × 22
+        //       = 330 px
+        TetrisCanvas.Height = 330;
+        // Défini la taille des boutons à partir des constantes
+        StartButton.Width = 200;
+        StartButton.Height = 30;
+        QuitButton.Width = 200;
+        QuitButton.Height = 30; 
+        // Initialise le minuteur pour faire descendre le tetrino courant toutes les 500 milisecondes
+        Minuteur = new DispatcherTimer();
+        Minuteur.Interval = TimeSpan.FromMilliseconds(500);
+        Minuteur.Tick += (s, e) => { BasInterface();};   
+        // détecte le clic sur le bouton Démarrer, déclanche l'évènement Demarrer, puis appelle la méthode DemarrerTetris
+        StartButton.Click += (s, e) => { DemarrerInterface();};
+        // détecte le clic sur le bouton Quitter, déclanche l'évènement Quiter, puis ferme la fenêtre
+        QuitButton.Click += (s, e) => { Close();};
+        // détecte la pression d'une touche du clavier, et déclanche l'évènement correspondant
+        KeyDown += (s, e) =>
+        {
+            // Choix des touches à modifier si besoin (voir la documentation de l'énumération Key)
+            if (e.Key == Key.Left)
+            {
+                GaucheInterface();
+            }
+            else if (e.Key == Key.Right)
+            {
+                DroiteInterface();
+            }
+            else if (e.Key == Key.X)
+            // si vous disposer d'un pavé numérique, choisir Key.PageUp
+            {
+                RotationDroiteInterface();
+            }
+            else if (e.Key == Key.W)
+            // si vous disposer d'un pavé numérique, choisir Key.Home
+            {
+                RotationGaucheInterface();
+            }
+            else if (e.Key == Key.Down)
+            {
+                TombeInterface();
+            }
+        };
+    } 
+
+    /* Dessine un rectangle dans le TetrisCanvas, à la position (x, y), de largeur width, 
+    de hauteur height (en pixels) et de couleur couleur. */
+    public void DessinerRectangle(int x, int y, int with, int height, Avalonia.Media.IBrush couleur)
+    {
+        TetrisCanvas.Children.Add(new Avalonia.Controls.Shapes.Rectangle
+        {
+            Width = with,
+            Height = height,
+            Fill = couleur,
+            Margin = new Thickness(x, y, 0, 0) 
+        });
+    }
+
+    /* Dessiner un cadre blanc dans le TetrisCanvas pour pouvoir initialiser le jeu sur un fond blanc */
+    public void DessinerCadre()
+    {
+        /* commence au coin haut gauche et va jusqu'au coin bas droit, la couleur est blanche */
+        DessinerRectangle(0,0,(int)TetrisCanvas.Width,(int)TetrisCanvas.Height, ConvertirCouleur(TetrinoCouleur.Aucune));
+    }
+
+    /*  prend en argument les coordonnées du carré
+    (dans le repère du jeu (RJ) en nombre de carrés) et sa couleur ( TetrinoCouleur) et dessine le carré
+    voulu dans la zone graphique TetrisCanva. */
+    public void DessinerCarre(int xRJ, int yRJ, TetrinoCouleur couleur)
+    {
+        // ATTENTION !!!!!! BORDURES MANQUENT
+        /* il y a 15 carraux verticalement et 12 horizontallement dont les dimensions sont 22*22*/
+        int x = 22 * xRJ;
+        int y = 22 * yRJ;
+        // dessine le carré à partir des cordonnées x,y en pixel calculés ci-dessus
+        DessinerRectangle(x,y,22,22,ConvertirCouleur(couleur));
+    }
+
+    /* Lance le jeu :
+       - initialise les éléments
+       - démarre le minuteur */
+    public void DemarrerInterface()
+    {
+        // dessine un cadre blanc pour initaliser
+        DessinerCadre();
+        // dessine un carré rouge à la position 0,0 de repère du jeu
+        DessinerCarre(0,0,TetrinoCouleur.Rouge);
+        // dessine un carré jaune à la position 1,1 de repère du jeu
+        DessinerCarre(1,1,TetrinoCouleur.Jaune);
+        // dessine un carré bleu à la position 2,2 de repère du jeu
+        DessinerCarre(2,2,TetrinoCouleur.Bleu);
+    }
+
+    /* Déplace le Tetrimino courant vers la droite */
+    public void DroiteInterface()
+    {
+        Console.WriteLine("Déplacement à droite à coder...");
+    }
+
+    /* Déplace le Tetrimino courant vers la gauche */
+    public void GaucheInterface()
+    {
+        Console.WriteLine("Déplacement à gauche à coder...");
+    }
+
+    /* Fait descendre automatiquement le Tetrimino d'une case */
+    public void BasInterface()
+    {
+        Console.WriteLine("Déplacement en bas à coder...");
+    }
+
+    /* Fait descendre rapidement le Tetrimino jusqu'en bas */
+    public void TombeInterface()
+    {
+        Console.WriteLine("Déplacement rapide en bas à coder...");
+
+    }
+
+    /* Fait tourner le Tetrimino vers la droite */
+    public void RotationDroiteInterface()
+    {
+        Console.WriteLine("Rotation à droit à coder...");
+    }
+
+    /* Fait tourner le Tetrimino vers la gauche */
+    public void RotationGaucheInterface()
+    {
+        Console.WriteLine("Rotation à gauche à coder...");
+    }
+
+    /* Convertit les couleurs de type enuméré TetrinoCouleur en couleur Avalonia.Media.Brushes.COULEUR
+    Retourne la couleur de type Avalonia.Media.IBrush */
+    public Avalonia.Media.IBrush ConvertirCouleur(TetrinoCouleur couleur)
+    {
+        if (couleur == TetrinoCouleur.Aucune) return Avalonia.Media.Brushes.White;
+        else if (couleur == TetrinoCouleur.Cadre) return Avalonia.Media.Brushes.Black;
+        else if (couleur == TetrinoCouleur.Bleu) return Avalonia.Media.Brushes.Blue;
+        else if (couleur == TetrinoCouleur.Jaune) return Avalonia.Media.Brushes.Yellow;
+        else return Avalonia.Media.Brushes.Red;
+    }
+}
+
+/* La classe qui représante la grille du jeu Tetris avec deux champs définis dont 
+les valeurs sont données dans le constructeur : LargeurGrille et HauteurGrille */
+public class JeuTetris
+{
+    public static int LargeurGrille;
+    public static int HauteurGrille;
+    public JeuTetris()
+    {
+        LargeurGrille = 12;
+        HauteurGrille = 15;
+    }
+}

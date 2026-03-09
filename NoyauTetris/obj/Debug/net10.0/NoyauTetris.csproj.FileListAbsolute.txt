@@ -1,0 +1,11 @@
+C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\NoyauTetris\bin\Debug\net10.0\NoyauTetris.deps.json
+C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\NoyauTetris\bin\Debug\net10.0\NoyauTetris.dll
+C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\NoyauTetris\bin\Debug\net10.0\NoyauTetris.pdb
+C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\NoyauTetris\obj\Debug\net10.0\NoyauTetris.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\NoyauTetris\obj\Debug\net10.0\NoyauTetris.AssemblyInfoInputs.cache
+C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\NoyauTetris\obj\Debug\net10.0\NoyauTetris.AssemblyInfo.cs
+C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\NoyauTetris\obj\Debug\net10.0\NoyauTetris.csproj.CoreCompileInputs.cache
+C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\NoyauTetris\obj\Debug\net10.0\NoyauTetris.dll
+C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\NoyauTetris\obj\Debug\net10.0\refint\NoyauTetris.dll
+C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\NoyauTetris\obj\Debug\net10.0\NoyauTetris.pdb
+C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\NoyauTetris\obj\Debug\net10.0\ref\NoyauTetris.dll
