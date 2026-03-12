@@ -1,221 +1,297 @@
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\InterfaceTetris.exe
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\InterfaceTetris.deps.json
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\InterfaceTetris.runtimeconfig.json
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\InterfaceTetris.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\InterfaceTetris.pdb
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Base.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Controls.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.DesignerSupport.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Dialogs.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Markup.Xaml.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Markup.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Metal.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.MicroCom.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.OpenGL.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Vulkan.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Controls.ColorPicker.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Desktop.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Diagnostics.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Fonts.Inter.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.FreeDesktop.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Native.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Remote.Protocol.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Skia.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Themes.Fluent.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Themes.Simple.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Win32.Automation.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Win32.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.X11.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\HarfBuzzSharp.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\MicroCom.Runtime.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\SkiaSharp.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\Tmds.DBus.Protocol.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\win-arm64\native\av_libglesv2.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\win-x64\native\av_libglesv2.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\win-x86\native\av_libglesv2.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\osx\native\libAvaloniaNative.dylib
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-arm\native\libHarfBuzzSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-arm64\native\libHarfBuzzSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-loongarch64\native\libHarfBuzzSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-musl-arm\native\libHarfBuzzSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-musl-arm64\native\libHarfBuzzSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-musl-loongarch64\native\libHarfBuzzSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-musl-riscv64\native\libHarfBuzzSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-musl-x64\native\libHarfBuzzSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-riscv64\native\libHarfBuzzSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-x64\native\libHarfBuzzSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-x86\native\libHarfBuzzSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\osx\native\libHarfBuzzSharp.dylib
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\win-arm64\native\libHarfBuzzSharp.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\win-x64\native\libHarfBuzzSharp.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\win-x86\native\libHarfBuzzSharp.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-arm\native\libSkiaSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-arm64\native\libSkiaSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-musl-x64\native\libSkiaSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-x64\native\libSkiaSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\osx\native\libSkiaSharp.dylib
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\win-arm64\native\libSkiaSharp.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\win-x64\native\libSkiaSharp.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\win-x86\native\libSkiaSharp.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\obj\Debug\net10.0\InterfaceTetris.csproj.AssemblyReference.cache
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\obj\Debug\net10.0\Avalonia\Resources.Inputs.cache
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\obj\Debug\net10.0\Avalonia\resources
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\obj\Debug\net10.0\InterfaceTetris.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\obj\Debug\net10.0\InterfaceTetris.AssemblyInfoInputs.cache
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\obj\Debug\net10.0\InterfaceTetris.AssemblyInfo.cs
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\obj\Debug\net10.0\InterfaceTetris.csproj.CoreCompileInputs.cache
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\obj\Debug\net10.0\Interfac.1E007829.Up2Date
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\obj\Debug\net10.0\InterfaceTetris.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\obj\Debug\net10.0\refint\InterfaceTetris.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\obj\Debug\net10.0\InterfaceTetris.pdb
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\obj\Debug\net10.0\InterfaceTetris.genruntimeconfig.cache
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration0\Tetris\InterfaceTetris\obj\Debug\net10.0\ref\InterfaceTetris.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\InterfaceTetris.exe
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\InterfaceTetris.deps.json
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\InterfaceTetris.runtimeconfig.json
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\InterfaceTetris.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\InterfaceTetris.pdb
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Base.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Controls.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.DesignerSupport.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Dialogs.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Markup.Xaml.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Markup.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Metal.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.MicroCom.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.OpenGL.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Vulkan.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Controls.ColorPicker.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Desktop.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Diagnostics.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Fonts.Inter.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.FreeDesktop.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Native.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Remote.Protocol.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Skia.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Themes.Fluent.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Themes.Simple.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Win32.Automation.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Win32.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.X11.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\HarfBuzzSharp.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\MicroCom.Runtime.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\SkiaSharp.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Tmds.DBus.Protocol.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\win-arm64\native\av_libglesv2.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\win-x64\native\av_libglesv2.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\win-x86\native\av_libglesv2.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\osx\native\libAvaloniaNative.dylib
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-arm\native\libHarfBuzzSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-arm64\native\libHarfBuzzSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-loongarch64\native\libHarfBuzzSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-musl-arm\native\libHarfBuzzSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-musl-arm64\native\libHarfBuzzSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-musl-loongarch64\native\libHarfBuzzSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-musl-riscv64\native\libHarfBuzzSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-musl-x64\native\libHarfBuzzSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-riscv64\native\libHarfBuzzSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-x64\native\libHarfBuzzSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-x86\native\libHarfBuzzSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\osx\native\libHarfBuzzSharp.dylib
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\win-arm64\native\libHarfBuzzSharp.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\win-x64\native\libHarfBuzzSharp.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\win-x86\native\libHarfBuzzSharp.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-arm\native\libSkiaSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-arm64\native\libSkiaSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-musl-x64\native\libSkiaSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-x64\native\libSkiaSharp.so
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\osx\native\libSkiaSharp.dylib
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\win-arm64\native\libSkiaSharp.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\win-x64\native\libSkiaSharp.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\win-x86\native\libSkiaSharp.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\obj\Debug\net10.0\InterfaceTetris.csproj.AssemblyReference.cache
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\obj\Debug\net10.0\Avalonia\Resources.Inputs.cache
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\obj\Debug\net10.0\Avalonia\resources
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\obj\Debug\net10.0\InterfaceTetris.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\obj\Debug\net10.0\InterfaceTetris.AssemblyInfoInputs.cache
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\obj\Debug\net10.0\InterfaceTetris.AssemblyInfo.cs
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\obj\Debug\net10.0\InterfaceTetris.csproj.CoreCompileInputs.cache
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\obj\Debug\net10.0\Interfac.1E007829.Up2Date
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\obj\Debug\net10.0\InterfaceTetris.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\obj\Debug\net10.0\refint\InterfaceTetris.dll
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\obj\Debug\net10.0\InterfaceTetris.pdb
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\obj\Debug\net10.0\InterfaceTetris.genruntimeconfig.cache
-C:\Users\galshama\Downloads\Projet_complement_prog\Iteration1\Tetris\InterfaceTetris\obj\Debug\net10.0\ref\InterfaceTetris.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\InterfaceTetris.exe
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\InterfaceTetris.deps.json
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\InterfaceTetris.runtimeconfig.json
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\InterfaceTetris.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\InterfaceTetris.pdb
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Base.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Controls.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.DesignerSupport.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Dialogs.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Markup.Xaml.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Markup.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Metal.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.MicroCom.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.OpenGL.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Vulkan.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Controls.ColorPicker.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Desktop.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Diagnostics.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Fonts.Inter.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.FreeDesktop.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Native.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Remote.Protocol.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Skia.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Themes.Fluent.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Themes.Simple.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Win32.Automation.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.Win32.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Avalonia.X11.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\HarfBuzzSharp.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\MicroCom.Runtime.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\SkiaSharp.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\Tmds.DBus.Protocol.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\win-arm64\native\av_libglesv2.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\win-x64\native\av_libglesv2.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\win-x86\native\av_libglesv2.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\osx\native\libAvaloniaNative.dylib
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-arm\native\libHarfBuzzSharp.so
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-arm64\native\libHarfBuzzSharp.so
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-loongarch64\native\libHarfBuzzSharp.so
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-musl-arm\native\libHarfBuzzSharp.so
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-musl-arm64\native\libHarfBuzzSharp.so
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-musl-loongarch64\native\libHarfBuzzSharp.so
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-musl-riscv64\native\libHarfBuzzSharp.so
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-musl-x64\native\libHarfBuzzSharp.so
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-riscv64\native\libHarfBuzzSharp.so
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-x64\native\libHarfBuzzSharp.so
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-x86\native\libHarfBuzzSharp.so
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\osx\native\libHarfBuzzSharp.dylib
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\win-arm64\native\libHarfBuzzSharp.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\win-x64\native\libHarfBuzzSharp.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\win-x86\native\libHarfBuzzSharp.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-arm\native\libSkiaSharp.so
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-arm64\native\libSkiaSharp.so
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-musl-x64\native\libSkiaSharp.so
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\linux-x64\native\libSkiaSharp.so
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\osx\native\libSkiaSharp.dylib
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\win-arm64\native\libSkiaSharp.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\win-x64\native\libSkiaSharp.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\runtimes\win-x86\native\libSkiaSharp.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\obj\Debug\net10.0\InterfaceTetris.csproj.AssemblyReference.cache
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\obj\Debug\net10.0\Avalonia\Resources.Inputs.cache
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\obj\Debug\net10.0\Avalonia\resources
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\obj\Debug\net10.0\InterfaceTetris.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\obj\Debug\net10.0\InterfaceTetris.AssemblyInfoInputs.cache
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\obj\Debug\net10.0\InterfaceTetris.AssemblyInfo.cs
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\obj\Debug\net10.0\InterfaceTetris.csproj.CoreCompileInputs.cache
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\obj\Debug\net10.0\Interfac.1E007829.Up2Date
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\obj\Debug\net10.0\InterfaceTetris.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\obj\Debug\net10.0\refint\InterfaceTetris.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\obj\Debug\net10.0\InterfaceTetris.pdb
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\obj\Debug\net10.0\InterfaceTetris.genruntimeconfig.cache
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\obj\Debug\net10.0\ref\InterfaceTetris.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\NoyauTetris.dll
-C:\Users\alsha\Documents\2025-2026\Complement_de_programmation\Projet\Iteration1\Tetris\InterfaceTetris\bin\Debug\net10.0\NoyauTetris.pdb
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/InterfaceTetris.exe
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/InterfaceTetris.deps.json
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/InterfaceTetris.runtimeconfig.json
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/InterfaceTetris.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/InterfaceTetris.pdb
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Base.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Controls.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.DesignerSupport.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Dialogs.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Markup.Xaml.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Markup.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Metal.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.MicroCom.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.OpenGL.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Vulkan.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Controls.ColorPicker.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Desktop.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Diagnostics.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Fonts.Inter.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.FreeDesktop.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Native.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Remote.Protocol.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Skia.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Themes.Fluent.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Themes.Simple.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Win32.Automation.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Win32.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.X11.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/HarfBuzzSharp.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/MicroCom.Runtime.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/SkiaSharp.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/Tmds.DBus.Protocol.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-arm64/native/av_libglesv2.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-x64/native/av_libglesv2.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-x86/native/av_libglesv2.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/osx/native/libAvaloniaNative.dylib
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-arm/native/libHarfBuzzSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-arm64/native/libHarfBuzzSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-loongarch64/native/libHarfBuzzSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-musl-arm/native/libHarfBuzzSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-musl-arm64/native/libHarfBuzzSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-musl-loongarch64/native/libHarfBuzzSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-musl-riscv64/native/libHarfBuzzSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-musl-x64/native/libHarfBuzzSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-riscv64/native/libHarfBuzzSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-x64/native/libHarfBuzzSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-x86/native/libHarfBuzzSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/osx/native/libHarfBuzzSharp.dylib
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-arm64/native/libHarfBuzzSharp.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-x64/native/libHarfBuzzSharp.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-x86/native/libHarfBuzzSharp.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-arm/native/libSkiaSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-arm64/native/libSkiaSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-musl-x64/native/libSkiaSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-x64/native/libSkiaSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/osx/native/libSkiaSharp.dylib
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-arm64/native/libSkiaSharp.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-x64/native/libSkiaSharp.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-x86/native/libSkiaSharp.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.csproj.AssemblyReference.cache
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/obj/Debug/net10.0/Avalonia/Resources.Inputs.cache
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/obj/Debug/net10.0/Avalonia/resources
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.AssemblyInfoInputs.cache
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.AssemblyInfo.cs
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.csproj.CoreCompileInputs.cache
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/obj/Debug/net10.0/Interfac.1E007829.Up2Date
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/obj/Debug/net10.0/refint/InterfaceTetris.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.pdb
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.genruntimeconfig.cache
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration0/Tetris/InterfaceTetris/obj/Debug/net10.0/ref/InterfaceTetris.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/InterfaceTetris.exe
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/InterfaceTetris.deps.json
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/InterfaceTetris.runtimeconfig.json
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/InterfaceTetris.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/InterfaceTetris.pdb
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Base.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Controls.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.DesignerSupport.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Dialogs.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Markup.Xaml.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Markup.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Metal.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.MicroCom.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.OpenGL.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Vulkan.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Controls.ColorPicker.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Desktop.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Diagnostics.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Fonts.Inter.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.FreeDesktop.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Native.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Remote.Protocol.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Skia.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Themes.Fluent.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Themes.Simple.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Win32.Automation.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Win32.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.X11.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/HarfBuzzSharp.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/MicroCom.Runtime.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/SkiaSharp.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Tmds.DBus.Protocol.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-arm64/native/av_libglesv2.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-x64/native/av_libglesv2.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-x86/native/av_libglesv2.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/osx/native/libAvaloniaNative.dylib
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-arm/native/libHarfBuzzSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-arm64/native/libHarfBuzzSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-loongarch64/native/libHarfBuzzSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-musl-arm/native/libHarfBuzzSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-musl-arm64/native/libHarfBuzzSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-musl-loongarch64/native/libHarfBuzzSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-musl-riscv64/native/libHarfBuzzSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-musl-x64/native/libHarfBuzzSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-riscv64/native/libHarfBuzzSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-x64/native/libHarfBuzzSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-x86/native/libHarfBuzzSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/osx/native/libHarfBuzzSharp.dylib
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-arm64/native/libHarfBuzzSharp.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-x64/native/libHarfBuzzSharp.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-x86/native/libHarfBuzzSharp.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-arm/native/libSkiaSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-arm64/native/libSkiaSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-musl-x64/native/libSkiaSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-x64/native/libSkiaSharp.so
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/osx/native/libSkiaSharp.dylib
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-arm64/native/libSkiaSharp.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-x64/native/libSkiaSharp.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-x86/native/libSkiaSharp.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.csproj.AssemblyReference.cache
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/obj/Debug/net10.0/Avalonia/Resources.Inputs.cache
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/obj/Debug/net10.0/Avalonia/resources
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.AssemblyInfoInputs.cache
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.AssemblyInfo.cs
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.csproj.CoreCompileInputs.cache
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/obj/Debug/net10.0/Interfac.1E007829.Up2Date
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/obj/Debug/net10.0/refint/InterfaceTetris.dll
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.pdb
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.genruntimeconfig.cache
+C:/Users/galshama/Downloads/Projet_complement_prog/Iteration1/Tetris/InterfaceTetris/obj/Debug/net10.0/ref/InterfaceTetris.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/InterfaceTetris.exe
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/InterfaceTetris.deps.json
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/InterfaceTetris.runtimeconfig.json
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/InterfaceTetris.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/InterfaceTetris.pdb
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Base.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Controls.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.DesignerSupport.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Dialogs.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Markup.Xaml.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Markup.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Metal.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.MicroCom.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.OpenGL.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Vulkan.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Controls.ColorPicker.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Desktop.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Diagnostics.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Fonts.Inter.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.FreeDesktop.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Native.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Remote.Protocol.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Skia.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Themes.Fluent.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Themes.Simple.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Win32.Automation.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Win32.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.X11.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/HarfBuzzSharp.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/MicroCom.Runtime.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/SkiaSharp.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/Tmds.DBus.Protocol.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-arm64/native/av_libglesv2.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-x64/native/av_libglesv2.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-x86/native/av_libglesv2.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/osx/native/libAvaloniaNative.dylib
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-arm/native/libHarfBuzzSharp.so
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-arm64/native/libHarfBuzzSharp.so
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-loongarch64/native/libHarfBuzzSharp.so
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-musl-arm/native/libHarfBuzzSharp.so
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-musl-arm64/native/libHarfBuzzSharp.so
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-musl-loongarch64/native/libHarfBuzzSharp.so
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-musl-riscv64/native/libHarfBuzzSharp.so
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-musl-x64/native/libHarfBuzzSharp.so
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-riscv64/native/libHarfBuzzSharp.so
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-x64/native/libHarfBuzzSharp.so
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-x86/native/libHarfBuzzSharp.so
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/osx/native/libHarfBuzzSharp.dylib
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-arm64/native/libHarfBuzzSharp.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-x64/native/libHarfBuzzSharp.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-x86/native/libHarfBuzzSharp.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-arm/native/libSkiaSharp.so
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-arm64/native/libSkiaSharp.so
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-musl-x64/native/libSkiaSharp.so
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-x64/native/libSkiaSharp.so
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/osx/native/libSkiaSharp.dylib
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-arm64/native/libSkiaSharp.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-x64/native/libSkiaSharp.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-x86/native/libSkiaSharp.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.csproj.AssemblyReference.cache
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/obj/Debug/net10.0/Avalonia/Resources.Inputs.cache
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/obj/Debug/net10.0/Avalonia/resources
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.AssemblyInfoInputs.cache
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.AssemblyInfo.cs
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.csproj.CoreCompileInputs.cache
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/obj/Debug/net10.0/Interfac.1E007829.Up2Date
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/obj/Debug/net10.0/refint/InterfaceTetris.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.pdb
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.genruntimeconfig.cache
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/obj/Debug/net10.0/ref/InterfaceTetris.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/NoyauTetris.dll
+C:/Users/alsha/Documents/2025-2026/Complement_de_programmation/Projet/Iteration1/Tetris/InterfaceTetris/bin/Debug/net10.0/NoyauTetris.pdb
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/InterfaceTetris
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/InterfaceTetris.deps.json
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/InterfaceTetris.runtimeconfig.json
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/InterfaceTetris.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/InterfaceTetris.pdb
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Base.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Controls.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.DesignerSupport.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Dialogs.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Markup.Xaml.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Markup.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Metal.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.MicroCom.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.OpenGL.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Vulkan.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Controls.ColorPicker.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Desktop.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Diagnostics.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Fonts.Inter.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.FreeDesktop.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Native.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Remote.Protocol.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Skia.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Themes.Fluent.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Themes.Simple.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Win32.Automation.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.Win32.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/Avalonia.X11.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/HarfBuzzSharp.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/MicroCom.Runtime.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/SkiaSharp.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/Tmds.DBus.Protocol.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-arm64/native/av_libglesv2.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-x64/native/av_libglesv2.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-x86/native/av_libglesv2.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/osx/native/libAvaloniaNative.dylib
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-arm/native/libHarfBuzzSharp.so
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-arm64/native/libHarfBuzzSharp.so
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-loongarch64/native/libHarfBuzzSharp.so
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-musl-arm/native/libHarfBuzzSharp.so
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-musl-arm64/native/libHarfBuzzSharp.so
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-musl-loongarch64/native/libHarfBuzzSharp.so
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-musl-riscv64/native/libHarfBuzzSharp.so
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-musl-x64/native/libHarfBuzzSharp.so
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-riscv64/native/libHarfBuzzSharp.so
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-x64/native/libHarfBuzzSharp.so
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-x86/native/libHarfBuzzSharp.so
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/osx/native/libHarfBuzzSharp.dylib
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-arm64/native/libHarfBuzzSharp.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-x64/native/libHarfBuzzSharp.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-x86/native/libHarfBuzzSharp.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-arm/native/libSkiaSharp.so
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-arm64/native/libSkiaSharp.so
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-musl-x64/native/libSkiaSharp.so
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/linux-x64/native/libSkiaSharp.so
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/osx/native/libSkiaSharp.dylib
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-arm64/native/libSkiaSharp.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-x64/native/libSkiaSharp.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/runtimes/win-x86/native/libSkiaSharp.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/NoyauTetris.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/bin/Debug/net10.0/NoyauTetris.pdb
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.csproj.AssemblyReference.cache
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/obj/Debug/net10.0/Avalonia/Resources.Inputs.cache
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/obj/Debug/net10.0/Avalonia/resources
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.GeneratedMSBuildEditorConfig.editorconfig
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.AssemblyInfoInputs.cache
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.AssemblyInfo.cs
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.csproj.CoreCompileInputs.cache
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.sourcelink.json
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/obj/Debug/net10.0/Interfac.1E007829.Up2Date
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/obj/Debug/net10.0/refint/InterfaceTetris.dll
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.pdb
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/obj/Debug/net10.0/InterfaceTetris.genruntimeconfig.cache
+/home/ghaith/Documents/Licence Informatique/Semestre 2/Complement_prog/Projet/Tetris/InterfaceTetris/obj/Debug/net10.0/ref/InterfaceTetris.dll
