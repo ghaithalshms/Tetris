@@ -123,12 +123,13 @@ public partial class MainWindow : Window
     voulu dans la zone graphique TetrisCanva. */
     public void DessinerCarre(int xRJ, int yRJ, TetrinoCouleur couleur)
     {
-        // ATTENTION !!!!!! BORDURES MANQUENT
-        /* il y a 15 carraux verticalement et 12 horizontallement dont les dimensions sont 22*22*/
+        /* On dessine un carré noir de taille 2x2, ensuite on dessine le carré coloré dedans de taille 20x20 
+        Il y a 15 carraux verticalement et 12 horizontallement dont les dimensions sont 22*22*/
         int x = 22 * xRJ;
         int y = 22 * yRJ;
         // dessine le carré à partir des cordonnées x,y en pixel calculés ci-dessus
-        DessinerRectangle(x,y,22,22,ConvertirCouleur(couleur));
+        DessinerRectangle(x,y,22,22,ConvertirCouleur(TetrinoCouleur.Cadre));
+        DessinerRectangle(x+1,y+1,20,20,ConvertirCouleur(couleur));
     }
 
     /* Lance le jeu :
