@@ -1,7 +1,8 @@
 /* Fichier MainWindow.axaml.cs
  * Gère l'interface du jeu de Tetris : la fenêtre graphique et 
  * l'ensemble des interactions du jeu.
- * Auteur : Ghaith ALSHAMAS
+ * Auteur : Groupe 5.
+ * Membres : ALSHAMAS Ghaith, BARROIS Nathan, DENNEMONT Maël, DIOP Awa.
  * Version : 1.1
  */
 
@@ -114,8 +115,10 @@ public partial class MainWindow : Window
     /* Dessiner un cadre blanc dans le TetrisCanvas pour pouvoir initialiser le jeu sur un fond blanc */
     public void DessinerCadre()
     {
-        /* commence au coin haut gauche et va jusqu'au coin bas droit, la couleur est blanche */
-        DessinerRectangle(0,0,(int)TetrisCanvas.Width,(int)TetrisCanvas.Height, ConvertirCouleur(TetrinoCouleur.Aucune));
+        /*On dessine un rectangle noir qui commence au coin haut gauche et va jusqu'au coin bas droit.
+        Dedans, on dessine un rectangle blanc pour avoir le même résultat que la Figure 2.*/
+        DessinerRectangle(0,0,(int)TetrisCanvas.Width,(int)TetrisCanvas.Height, ConvertirCouleur(TetrinoCouleur.Cadre));
+        DessinerRectangle(8,0,(int)TetrisCanvas.Width-16,(int)TetrisCanvas.Height-8, ConvertirCouleur(TetrinoCouleur.Aucune));
     }
 
     /*  prend en argument les coordonnées du carré
@@ -124,9 +127,11 @@ public partial class MainWindow : Window
     public void DessinerCarre(int xRJ, int yRJ, TetrinoCouleur couleur)
     {
         /* On dessine un carré noir de taille 2x2, ensuite on dessine le carré coloré dedans de taille 20x20 
-        Il y a 15 carraux verticalement et 12 horizontallement dont les dimensions sont 22*22*/
-        int x = 22 * xRJ;
-        int y = 22 * yRJ;
+        Il y a 15 carraux verticalement et 12 horizontallement dont les dimensions sont 22*22
+        On décale les carraux horizontals 8 pixels vers la droites à cause de la bordure noire
+        Et on décale, de la même raison, les carraux verticales 8 pixels vers le bas.*/
+        int x = 22 * xRJ + 8;
+        int y = 22 * yRJ + 8;
         // dessine le carré à partir des cordonnées x,y en pixel calculés ci-dessus
         DessinerRectangle(x,y,22,22,ConvertirCouleur(TetrinoCouleur.Cadre));
         DessinerRectangle(x+1,y+1,20,20,ConvertirCouleur(couleur));
