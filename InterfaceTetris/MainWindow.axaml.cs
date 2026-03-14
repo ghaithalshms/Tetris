@@ -16,6 +16,7 @@ using NoyauTetris;
 
 namespace InterfaceTetris;
 
+/**Les couleur qui seront utilisée pour les carraux*/
 public enum TetrinoCouleur
 {
     Aucune,   // case vide
@@ -28,7 +29,7 @@ public enum TetrinoCouleur
 
 
 
-/* Gère la fenêtre principale du jeu de Tetris, et l'ensemble des interactions du jeu. */
+/** Gère la fenêtre principale du jeu de Tetris, et l'ensemble des interactions du jeu. */
 public partial class MainWindow : Window
 {
     /* Minuteur qui déclanche régulièrement un évènement. */
@@ -99,7 +100,7 @@ public partial class MainWindow : Window
         };
     } 
 
-    /* Dessine un rectangle dans le TetrisCanvas, à la position (x, y), de largeur width, 
+    /** Dessine un rectangle dans le TetrisCanvas, à la position (x, y), de largeur width, 
     de hauteur height (en pixels) et de couleur couleur. */
     public void DessinerRectangle(int x, int y, int with, int height, Avalonia.Media.IBrush couleur)
     {
@@ -112,7 +113,7 @@ public partial class MainWindow : Window
         });
     }
 
-    /* Dessiner un cadre blanc dans le TetrisCanvas pour pouvoir initialiser le jeu sur un fond blanc */
+    /** Dessiner un cadre blanc dans le TetrisCanvas pour pouvoir initialiser le jeu sur un fond blanc */
     public void DessinerCadre()
     {
         /*On dessine un rectangle noir qui commence au coin haut gauche et va jusqu'au coin bas droit.
@@ -121,7 +122,7 @@ public partial class MainWindow : Window
         DessinerRectangle(8,0,(int)TetrisCanvas.Width-16,(int)TetrisCanvas.Height-8, ConvertirCouleur(TetrinoCouleur.Aucune));
     }
 
-    /*  prend en argument les coordonnées du carré
+    /**  prend en argument les coordonnées du carré
     (dans le repère du jeu (RJ) en nombre de carrés) et sa couleur ( TetrinoCouleur) et dessine le carré
     voulu dans la zone graphique TetrisCanva. */
     public void DessinerCarre(int xRJ, int yRJ, TetrinoCouleur couleur)
@@ -137,7 +138,7 @@ public partial class MainWindow : Window
         DessinerRectangle(x+1,y+1,20,20,ConvertirCouleur(couleur));
     }
 
-    /* Lance le jeu :
+    /** Lance le jeu :
        - initialise les éléments
        - démarre le minuteur */
     public void DemarrerInterface()
@@ -152,44 +153,44 @@ public partial class MainWindow : Window
         DessinerCarre(2,2,TetrinoCouleur.Bleu);
     }
 
-    /* Déplace le Tetrimino courant vers la droite */
+    /** Déplace le Tetrimino courant vers la droite */
     public void DroiteInterface()
     {
         Console.WriteLine("Déplacement à droite à coder...");
     }
 
-    /* Déplace le Tetrimino courant vers la gauche */
+    /** Déplace le Tetrimino courant vers la gauche */
     public void GaucheInterface()
     {
         Console.WriteLine("Déplacement à gauche à coder...");
     }
 
-    /* Fait descendre automatiquement le Tetrimino d'une case */
+    /** Fait descendre automatiquement le Tetrimino d'une case */
     public void BasInterface()
     {
         Console.WriteLine("Déplacement en bas à coder...");
     }
 
-    /* Fait descendre rapidement le Tetrimino jusqu'en bas */
+    /** Fait descendre rapidement le Tetrimino jusqu'en bas */
     public void TombeInterface()
     {
         Console.WriteLine("Déplacement rapide en bas à coder...");
 
     }
 
-    /* Fait tourner le Tetrimino vers la droite */
+    /** Fait tourner le Tetrimino vers la droite */
     public void RotationDroiteInterface()
     {
         Console.WriteLine("Rotation à droit à coder...");
     }
 
-    /* Fait tourner le Tetrimino vers la gauche */
+    /** Fait tourner le Tetrimino vers la gauche */
     public void RotationGaucheInterface()
     {
         Console.WriteLine("Rotation à gauche à coder...");
     }
 
-    /* Convertit les couleurs de type enuméré TetrinoCouleur en couleur Avalonia.Media.Brushes.COULEUR
+    /** Convertit les couleurs de type enuméré TetrinoCouleur en couleur Avalonia.Media.Brushes.COULEUR
     Retourne la couleur de type Avalonia.Media.IBrush */
     public Avalonia.Media.IBrush ConvertirCouleur(TetrinoCouleur couleur)
     {
@@ -201,7 +202,7 @@ public partial class MainWindow : Window
     }
 }
 
-/* La classe qui représante la grille du jeu Tetris avec deux champs définis dont 
+/** La classe qui représante la grille du jeu Tetris avec deux champs définis dont 
 les valeurs sont données dans le constructeur : LargeurGrille et HauteurGrille */
 public class JeuTetris
 {
