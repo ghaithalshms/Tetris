@@ -3,7 +3,7 @@
  * l'ensemble des interactions du jeu.
  * Auteur : Groupe 5.
  * Membres : ALSHAMAS Ghaith, BARROIS Nathan, DENNEMONT Maël, DIOP Awa.
- * Version : 1.1
+ * Version : 1.2
  */
 
 using Avalonia;
@@ -23,7 +23,11 @@ public enum TetrinoCouleur
     Cadre,    // bordures
     Bleu,
     Jaune,
-    Rouge
+    Rouge,
+    Violet,
+    Orange,
+    Vert,
+    Cyan,
 }
 
 
@@ -198,6 +202,10 @@ public partial class MainWindow : Window
         else if (couleur == TetrinoCouleur.Cadre) return Avalonia.Media.Brushes.Black;
         else if (couleur == TetrinoCouleur.Bleu) return Avalonia.Media.Brushes.Blue;
         else if (couleur == TetrinoCouleur.Jaune) return Avalonia.Media.Brushes.Yellow;
+        else if (couleur == TetrinoCouleur.Cyan) return Avalonia.Media.Brushes.Cyan;
+        else if (couleur == TetrinoCouleur.Vert) return Avalonia.Media.Brushes.Green;
+        else if (couleur == TetrinoCouleur.Violet) return Avalonia.Media.Brushes.Violet;
+        else if (couleur == TetrinoCouleur.Orange) return Avalonia.Media.Brushes.Orange;
         else return Avalonia.Media.Brushes.Red;
     }
 }
