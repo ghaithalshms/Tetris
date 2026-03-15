@@ -16,23 +16,6 @@ using NoyauTetris;
 
 namespace InterfaceTetris;
 
-/**Les couleur qui seront utilisée pour les carraux*/
-public enum TetrinoCouleur
-{
-    Aucune,   // case vide
-    Cadre,    // bordures
-    Bleu,
-    Jaune,
-    Rouge,
-    Violet,
-    Orange,
-    Vert,
-    Cyan,
-}
-
-
-
-
 /** Gère la fenêtre principale du jeu de Tetris, et l'ensemble des interactions du jeu. */
 public partial class MainWindow : Window
 {
