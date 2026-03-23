@@ -26,7 +26,7 @@ public class TestNoyeau
         Tetrino t = new Tetrino();
 
         // Assert
-        Assert.Equal(0, t.Indice); // 0 = Carré dans ton TetrinosTab
+        Assert.Equal(0, t.Indice); // 0 = Carré
         Assert.Equal(TetrinoCouleur.Rouge, t.Couleur);
         Assert.Equal(0, t.PositionOrigine.X);
         Assert.Equal(0, t.PositionOrigine.Y);
@@ -38,7 +38,7 @@ public class TestNoyeau
         // Arrange
         Tetrino t = new Tetrino();
         t.PositionOrigine = new Position(10, 10);
-        t.Indice = 0; // Le carré : (0,0), (1,0), (0,-1), (1,-1)
+        t.Indice = 0; // carré 
 
         // Act
         Position[] posCalculees = t.Positions();
@@ -60,7 +60,7 @@ public class TestNoyeau
         t.NouveauTetrino();
 
         // Assert
-        // Vérifie qu'on n'a pas de Blanc (0) ou Noir (1) comme spécifié dans ton code
+        // Vérifie qu'on n'a pas de Blanc (0) ou Noir (1)
         Assert.True((int)t.Couleur >= 2);
         Assert.True((int)t.Couleur < Enum.GetValues(typeof(TetrinoCouleur)).Length);
     }
