@@ -3,7 +3,7 @@ using Xunit;
 
 namespace TestTetris;
 
-public class UnitTest1
+public class TestNoyeau
 {
     [Fact]
     public void TestPosition_DeplacementBas_AugmenteY()
