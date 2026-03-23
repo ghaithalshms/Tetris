@@ -6,8 +6,8 @@
     Comme le l'interface est dépendante du noyeau et a un lien avec, cela ne pose pas de problème. */
 public enum TetrinoCouleur
 {
-    Aucune,   // case vide
-    Cadre,    // bordures
+    Blanc,   // case vide
+    Noir,    // bordures
     Bleu,
     Jaune,
     Rouge,
@@ -33,26 +33,21 @@ public class Position
     /** La méthode qui déplace le carré de position X, Y à gauche. */
     public void DeplacerGauche()
     {
-        
+        this.X = this.X - 1;
     }
 
     /** La méthode qui déplace le carré de position X, Y à droite. */
     public void DeplacerDroite()
     {
-        
+        this.X = this.X + 1;
     }
 
     /** La méthode qui déplace le carré de position X, Y en bas. */
     public void DeplacerBas()
     {
-        
+        this.Y = this.Y + 1;
     }
 
-    /** Méthode statique qui additionne deux positions du type Position. */
-    public static Position AdditionPosition(Position p1, Position p2)
-    {
-        return new Position(p1.X + p2.X, p1.Y + p2.Y);
-    }
 }
 
 /** La classe qui représante un tetrino par 4 carées (avec leur représentation par la classe Position) */
@@ -82,28 +77,26 @@ public class Tetrino
     public int Indice;
 
     // La variable qui positionne l’origine du tetrino dans le repère du jeu (coin supérieur gauche : Y=0)
-    public Position PositionOrigine; 
+    public Position PositionOrigine;
 
-    /* !!!!!!!!!!!!!!!!!!!!!!!!!!! Pas besoin ? A DEMANDER AU PROF !!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // TODO: FAIRE UN DEUXIEME TABLEAU STATIQUE A LA MAIN
+
     // Méthode trouvée sur StacK Overflow (questions/856154) pour avoir la longueur d'une énumération 
-    public static TetrinoCouleur[] CouleursTetrinos = new TetrinoCouleur[Enum.GetValues(typeof(TetrinoCouleur)).Length];*/
+    public static TetrinoCouleur[] CouleursTetrinos = new TetrinoCouleur[Enum.GetValues(typeof(TetrinoCouleur)).Length];
     public TetrinoCouleur Couleur;
-    
+    // création de l'objet random à utiliser pour génerer des nombres 'aléeatoires'.
     // Déclaration de random en tant qu'attribut pour éviter les déclarations inutiles lors de l'appelle de la méthode NouveauTetrino. 
     private static Random random = new Random();
 
     public Tetrino()
     {
-        //this.PositionOrigine = positionOrigine;
-        /*
         // Remplissage du tableau CouleursTetrinos avec un casting
-        for (int i=0; i < CouleursTetrinos.Length; i=i+1) CouleursTetrinos[i] = (TetrinoCouleur)i;
-        */
+        for (int i = 0; i < CouleursTetrinos.Length; i = i + 1) CouleursTetrinos[i] = (TetrinoCouleur)i;
 
         //Le constructeur définit un tetrino fixe : le carré rouge dont la position d’origine est (0, 0)
         this.Indice = 0; // carré 
         this.Couleur = TetrinoCouleur.Rouge;
-        this.PositionOrigine = new Position(0,0);
+        this.PositionOrigine = new Position(0, 0);
 
     }
 
@@ -112,9 +105,10 @@ public class Tetrino
     public Position[] Positions()
     {
         Position[] positionsAvecOrigine = new Position[TetrinosTab[Indice].Length];
-        for (int i=0; i < TetrinosTab[Indice].Length; i = i + 1)
+        for (int i = 0; i < TetrinosTab[Indice].Length; i = i + 1)
         {
-            positionsAvecOrigine[i] = Position.AdditionPosition(PositionOrigine, TetrinosTab[Indice][i]);
+            // on défini une nouvelle Position en additionnant les deux Positions PositionOrigine et TetrinosTab[Indice][i].
+            positionsAvecOrigine[i] = new Position(PositionOrigine.X + TetrinosTab[Indice][i].X, PositionOrigine.Y + TetrinosTab[Indice][i].Y);
         }
         return positionsAvecOrigine;
     }
@@ -123,19 +117,18 @@ public class Tetrino
     du TetrinosTab, une positionOrigine et une Couleur */
     public void NouveauTetrino()
     {
-        // création de l'objet random à utiliser pour génerer des nombres 'aléeatoires'.
-        this.Indice = random.Next(0,TetrinosTab.Length);
-        // Un casting a été utilisé pour définir la couleur à partir du nombre généré. On commence à 2 pour exclure les couleurs Aucune et Cadre.
+        this.Indice = random.Next(0, TetrinosTab.Length);
+        // Un casting a été utilisé pour définir la couleur à partir du nombre généré. On commence à 2 pour exclure les couleurs noire et blanche.
         this.Couleur = (TetrinoCouleur)random.Next(2, Enum.GetValues(typeof(TetrinoCouleur)).Length);
-        
+
         // Ici, on va chercher l'indice maximale que X peut atteindre en fonction des positions sélectionnées par Indice.
         int decalageMax = 0;
         Position[] positions = TetrinosTab[this.Indice];
-        for (int i=0; i<positions.Length; i = i + 1)
+        for (int i = 0; i < positions.Length; i = i + 1)
         {
             if (positions[i].X > decalageMax) decalageMax = positions[i].X;
         }
-        int positionOrigineX = random.Next(0,12 - decalageMax);
+        int positionOrigineX = random.Next(0, 12 - decalageMax);
         this.PositionOrigine = new Position(positionOrigineX, 0);
     }
 
