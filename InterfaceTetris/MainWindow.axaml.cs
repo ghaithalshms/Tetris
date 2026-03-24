@@ -124,21 +124,26 @@ public partial class MainWindow : Window
         DessinerRectangle(x + 1, y + 1, 20, 20, ConvertirCouleur(couleur));
     }
 
+    /** Réinitialisation du cadre et dessiner le TetrinoCourant */
     public void DessinerJeu()
     {
-        TetrisCanvas.Children.Clear(); // Supprime le cadre et son contenu, une sorte de reset
+        // Supprime le cadre et son contenu, une sorte de reset
+        TetrisCanvas.Children.Clear();
 
-        DessinerCadre(); // Recréer le cadre pour le rafraichir
+        // Recréer le cadre pour le rafraichir
+        DessinerCadre();
 
-        Position[] positions = Tetrino.TetrinosTab[Jeu.TetrinoCourant.Indice]; // Prend les coordonées du Tetrino courant
+        // Prend les coordonées du Tetrino courant
+        Position[] positions = Tetrino.TetrinosTab[Jeu.TetrinoCourant.Indice];
 
         foreach (Position pos in positions)
         {
             int x = Jeu.TetrinoCourant.PositionOrigine.X + pos.X;
             int y = Jeu.TetrinoCourant.PositionOrigine.Y + pos.Y;
 
+            // Permet de prendre la forme du Tetrino courant à travers ses coordonéees
             DessinerCarre(x, y, Jeu.TetrinoCourant.Couleur);
-        } // Permet de prendre la forme du Tetrino courant à travers ses coordonéees
+        }
     }
 
     /** Lance le jeu :
