@@ -133,7 +133,7 @@ public partial class MainWindow : Window
         // Recréer le cadre pour le rafraichir
         DessinerCadre();
 
-        // Prend les coordonées du Tetrino courant
+        // Prend les coordonées des carrés du Tetrino courant
         Position[] positions = Tetrino.TetrinosTab[Jeu.TetrinoCourant.Indice];
 
         foreach (Position pos in positions)
@@ -142,7 +142,10 @@ public partial class MainWindow : Window
             int y = Jeu.TetrinoCourant.PositionOrigine.Y + pos.Y;
 
             // Permet de prendre la forme du Tetrino courant à travers ses coordonéees
-            DessinerCarre(x, y, Jeu.TetrinoCourant.Couleur);
+            if (y >= 0)
+            {
+                DessinerCarre(x, y, Jeu.TetrinoCourant.Couleur);
+            }
         }
     }
 
