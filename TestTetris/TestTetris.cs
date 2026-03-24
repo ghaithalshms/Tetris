@@ -16,6 +16,42 @@ public class TestNoyeau
         Assert.Equal(5, pos.X);
     }
 
+    /** On vérifie que le déplacement à gauche décrémente bien X */
+    [Fact]
+    public void TestPosition_DeplacementGauche()
+    {
+        Position pos = new Position(5, 5);
+
+        pos.DeplacerGauche();
+
+        Assert.Equal(4, pos.X);
+        Assert.Equal(5, pos.Y);
+    }
+
+    /** On vérifie que le déplacement à gauche décrémente bien X même s'il va sortir du cadre : le noyau ne doit pas gérer cela */
+    [Fact]
+    public void TestPosition_DeplacementGauche_HorsCadre()
+    {
+        Position pos = new Position(0, 0);
+
+        pos.DeplacerGauche();
+
+        Assert.Equal(-1, pos.X);
+        Assert.Equal(0, pos.Y);
+    }
+
+    /** On vérifie que le déplacement à droite incrémente bien X */
+    [Fact]
+    public void TestPosition_DeplacementDroite()
+    {
+        Position pos = new Position(5, 5);
+
+        pos.DeplacerDroite();
+
+        Assert.Equal(6, pos.X);
+        Assert.Equal(5, pos.Y);
+    }
+
     /** On vérifie que le tetrino par défaut est bien un carré rouge en (0,0) */
     [Fact]
     public void TestTetrino_InitialisationParDefaut()
@@ -56,41 +92,6 @@ public class TestNoyeau
         Assert.True((int)t.Couleur < Enum.GetValues(typeof(TetrinoCouleur)).Length);
     }
 
-    /** On vérifie que le déplacement à gauche décrémente bien X */
-    [Fact]
-    public void TestPosition_DeplacementGauche()
-    {
-        Position pos = new Position(5, 5);
-
-        pos.DeplacerGauche();
-
-        Assert.Equal(4, pos.X);
-        Assert.Equal(5, pos.Y);
-    }
-
-    /** On vérifie que le déplacement à gauche décrémente bien X même s'il va sortir du cadre : le noyau ne doit pas gérer cela */
-    [Fact]
-    public void TestPosition_DeplacementGauche_HorsCadre()
-    {
-        Position pos = new Position(0, 0);
-
-        pos.DeplacerGauche();
-
-        Assert.Equal(-1, pos.X);
-        Assert.Equal(0, pos.Y);
-    }
-
-    /** On vérifie que le déplacement à droite incrémente bien X */
-    [Fact]
-    public void TestPosition_DeplacementDroite()
-    {
-        Position pos = new Position(5, 5);
-
-        pos.DeplacerDroite();
-
-        Assert.Equal(6, pos.X);
-        Assert.Equal(5, pos.Y);
-    }
 
     /** On vérifie que les positions calculées pour une barre horizontale sont correctes */
     [Fact]

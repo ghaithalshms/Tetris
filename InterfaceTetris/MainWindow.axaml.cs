@@ -39,7 +39,7 @@ public partial class MainWindow : Window
         //330 + 24 + 80 + 40 + 40 + 40 + 40
         Height = 594;
         // Définit le texte de InfoText
-        InfoText.Text = "Tetris";
+        InfoText.Text = "Zone texte";
         // Défini la taille du canvas à partir des constantes
         TetrisCanvas.Width = JeuTetris.LargeurGrille * 22 + 16; //+16 pour les bordures noires : 8 à gauche et 8 à droite
         TetrisCanvas.Height = JeuTetris.HauteurGrille * 22 + 8;//+8 pour la bordure noire de bas
