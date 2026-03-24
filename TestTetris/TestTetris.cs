@@ -1,66 +1,57 @@
 ﻿using NoyauTetris;
-using Xunit;
 
 namespace TestTetris;
 
 public class TestNoyeau
 {
+    /** On vérifie que le déplacement se fait sans erreur */
     [Fact]
-    public void TestPosition_DeplacementBas_AugmenteY()
+    public void TestPosition_DeplacementBas()
     {
-        // Arrange
         Position pos = new Position(5, 5);
 
-        // Act
         pos.DeplacerBas();
 
-        // Assert
         Assert.Equal(6, pos.Y);
         Assert.Equal(5, pos.X);
     }
 
+    /** On vérifie que le tetrino par défaut est bien un carré rouge en (0,0) */
     [Fact]
-    public void TestTetrino_InitialisationParDefaut_EstUnCarreRouge()
+    public void TestTetrino_InitialisationParDefaut()
     {
-        // Act
         Tetrino t = new Tetrino();
 
-        // Assert
         Assert.Equal(0, t.Indice); // 0 = Carré
         Assert.Equal(TetrinoCouleur.Rouge, t.Couleur);
         Assert.Equal(0, t.PositionOrigine.X);
         Assert.Equal(0, t.PositionOrigine.Y);
     }
 
+    /** On vérifie que l'origine est bien en bas à gauche en vérifiant les cordoonées*/
     [Fact]
-    public void TestTetrino_Positions_AppliqueLeDecalageOrigine()
+    public void TestTetrino_Positions()
     {
-        // Arrange
         Tetrino t = new Tetrino();
         t.PositionOrigine = new Position(10, 10);
         t.Indice = 0; // carré 
 
-        // Act
         Position[] posCalculees = t.Positions();
 
-        // Assert
         Assert.Equal(10, posCalculees[0].X);
         Assert.Equal(10, posCalculees[0].Y);
         Assert.Equal(11, posCalculees[1].X);
         Assert.Equal(9, posCalculees[2].Y);
     }
 
+    /** On véirife que la couleur générée est valide : l'indice est bien dans la longueur de l'énumération et n'est ni blanc ni noir */
     [Fact]
-    public void TestTetrino_NouveauTetrino_GenereCouleurValide()
+    public void TestTetrino_NouveauTetrino()
     {
-        // Arrange
         Tetrino t = new Tetrino();
 
-        // Act
         t.NouveauTetrino();
 
-        // Assert
-        // Vérifie qu'on n'a pas de Blanc (0) ou Noir (1)
         Assert.True((int)t.Couleur >= 2);
         Assert.True((int)t.Couleur < Enum.GetValues(typeof(TetrinoCouleur)).Length);
     }

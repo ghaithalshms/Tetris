@@ -1,9 +1,7 @@
 ﻿namespace NoyauTetris;
 
 
-/** Les couleur qui seront utilisée pour les carraux 
-    NOTE IMPORTANTE : cet enumération a été déplacé ici, dans le noyeau, car est utile dans ce fichier.
-    Comme le l'interface est dépendante du noyeau et a un lien avec, cela ne pose pas de problème. */
+/** Les couleur qui seront utilisée pour les carrés */
 public enum TetrinoCouleur
 {
     Blanc,   // case vide
@@ -79,19 +77,21 @@ public class Tetrino
     // La variable qui positionne l’origine du tetrino dans le repère du jeu (coin supérieur gauche : Y=0)
     public Position PositionOrigine;
 
-    // TODO: FAIRE UN DEUXIEME TABLEAU STATIQUE A LA MAIN
-
-    // Méthode trouvée sur StacK Overflow (questions/856154) pour avoir la longueur d'une énumération 
+    // Méthode trouvée sur StackOverflow (questions/856154) pour avoir la longueur d'une énumération 
+    // Note : ici on pourrait ne pas créer ce tableau en utilisant tout simplement l'énumération avec des casting depuis des entiers pour les choix
     public static TetrinoCouleur[] CouleursTetrinos = new TetrinoCouleur[Enum.GetValues(typeof(TetrinoCouleur)).Length];
     public TetrinoCouleur Couleur;
-    // création de l'objet random à utiliser pour génerer des nombres 'aléeatoires'.
-    // Déclaration de random en tant qu'attribut pour éviter les déclarations inutiles lors de l'appelle de la méthode NouveauTetrino. 
+    /*  Création de l'objet random à utiliser pour génerer des nombres 'aléeatoires'.
+        Déclaration de random en tant qu'attribut pour éviter les déclarations inutiles lors de l'appelle de la méthode NouveauTetrino. */
     private static Random random = new Random();
 
     public Tetrino()
     {
         // Remplissage du tableau CouleursTetrinos avec un casting
-        for (int i = 0; i < CouleursTetrinos.Length; i = i + 1) CouleursTetrinos[i] = (TetrinoCouleur)i;
+        for (int i = 0; i < CouleursTetrinos.Length; i = i + 1)
+        {
+            CouleursTetrinos[i] = (TetrinoCouleur)i;
+        }
 
         //Le constructeur définit un tetrino fixe : le carré rouge dont la position d’origine est (0, 0)
         this.Indice = 0; // carré 
@@ -128,7 +128,7 @@ public class Tetrino
         {
             if (positions[i].X > decalageMax) decalageMax = positions[i].X;
         }
-        int positionOrigineX = random.Next(0, 12 - decalageMax);
+        int positionOrigineX = random.Next(0, 12 - decalageMax); // (12 - decalageMax) exclu
         this.PositionOrigine = new Position(positionOrigineX, 0);
     }
 

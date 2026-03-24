@@ -9,8 +9,9 @@
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="16">
             <TextBlock Name="InfoText" FontSize="20" HorizontalAlignment="Center" Text="Zone de texte"/>
             <Canvas Name="TetrisCanvas" Background="#222"/>
-            <Button Name="StartButton" Content="Démarrer" />
-            <Button Name="QuitButton" Content="Quitter" />
+            <Button Name="StartButton" Content="Démarrer" HorizontalContentAlignment="Center"/>  
+            <Button Name="QuitButton" Content="Quitter" HorizontalContentAlignment="Center"/>
+            <!--HorizontalContentAlignment a été utilisé pour que le texte soit en centre du bouton-->
         </StackPanel>
     </Grid>
 </Window>
