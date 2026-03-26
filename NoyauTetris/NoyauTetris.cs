@@ -203,7 +203,7 @@ public class Tetrino
         {
             if (positions[i].X > decalageMax) decalageMax = positions[i].X;
         }
-        int positionOrigineX = random.Next(0, 12 - decalageMax); // (12 - decalageMax) exclu
+        int positionOrigineX = random.Next(0, JeuTetris.LargeurGrille - decalageMax); // (JeuTetris.LargeurGrille - decalageMax) exclu
         this.PositionOrigine = new Position(positionOrigineX, 0);
     }
 
