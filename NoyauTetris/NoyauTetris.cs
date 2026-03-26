@@ -37,7 +37,7 @@ public class JeuTetris
         this.TetrinoCourant.NouveauTetrino();
     }
 
-    // Déplace d'une case vers la droite avec vérification
+    /** Déplace d'une case vers la droite avec vérification */
     public void Droite()
     {
         // Ici, on va chercher l'indice maximale que X peut atteindre en fonction des positions sélectionnées par Indice.
@@ -56,7 +56,7 @@ public class JeuTetris
         }
     }
 
-    // Déplace d'une case vers la gauche avec vérification
+    /** Déplace d'une case vers la gauche avec vérification */
     public void Gauche()
     {
         if (this.TetrinoCourant.PositionOrigine.X > 0)
@@ -66,8 +66,8 @@ public class JeuTetris
     }
 
 
-    // Déplace d'une case vers le bas avec vérification
-    // Si le tetrino arrive en bas, il disparaît et un nouveau apparaît
+    /** Déplace d'une case vers le bas avec vérification
+     Si le tetrino arrive en bas, il disparaît et un nouveau apparaît */
     public void Bas()
     {
         if (this.TetrinoCourant.PositionOrigine.Y < HauteurGrille - 1)
@@ -79,7 +79,7 @@ public class JeuTetris
             Demarrer();
         }
     }
-    // Fait tomber le tetrino jusqu'en bas, puis en crée un nouveau
+    /** Fait tomber le tetrino jusqu'en bas, puis en crée un nouveau */
     public void Tombe()
     {
         while (this.TetrinoCourant.PositionOrigine.Y < HauteurGrille - 1)

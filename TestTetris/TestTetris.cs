@@ -2,7 +2,7 @@
 
 namespace TestTetris;
 
-public class TestNoyeau
+public class TestPosition
 {
     /** On vérifie que le déplacement en bas augmente la valeur de Y */
     [Fact]
@@ -51,7 +51,9 @@ public class TestNoyeau
         Assert.Equal(6, pos.X);
         Assert.Equal(5, pos.Y);
     }
-
+}
+public class TestTetrino
+{
     /** On vérifie que le tetrino par défaut est bien un carré rouge en (0,0) */
     [Fact]
     public void TestTetrino_InitialisationParDefaut()
@@ -144,5 +146,220 @@ public class TestNoyeau
         Assert.Equal(TetrinoCouleur.Cyan, Tetrino.CouleursTetrinos[Tetrino.CouleursTetrinos.Length - 1]);
         // On vérifie qu'ils ont la même longueur 
         Assert.Equal(Tetrino.CouleursTetrinos.Length, Enum.GetValues(typeof(TetrinoCouleur)).Length);
+    }
+}
+
+
+public class TestJeuTetris
+{
+    // ============================================================
+    // TEST 1
+    // Vérifie que le constructeur de JeuTetris initialise bien :
+    // - la largeur de la grille
+    // - la hauteur de la grille
+    // - le tétrino courant
+    // ============================================================
+    [Fact]
+    public void Constructeur_Initialise_Bien_Le_Jeu()
+    {
+        // Arrange + Act
+        // On crée simplement un nouveau jeu
+        JeuTetris jeu = new JeuTetris();
+
+        // Assert
+        // On vérifie les valeurs attendues
+        Assert.Equal(12, JeuTetris.LargeurGrille);
+        Assert.Equal(15, JeuTetris.HauteurGrille);
+
+        // On vérifie que le tétrino courant existe
+        Assert.NotNull(jeu.TetrinoCourant);
+    }
+
+    // ============================================================
+    // TEST 2
+    // Vérifie que la méthode Gauche() déplace bien le tétrino
+    // d'une case vers la gauche si X > 0
+    // ============================================================
+    [Fact]
+    public void Gauche_Deplace_Bien_Le_Tetrino()
+    {
+        // Arrange
+        JeuTetris jeu = new JeuTetris();
+
+        // On place l'origine du tétrino à X = 5
+        jeu.TetrinoCourant.PositionOrigine = new Position(5, 0);
+
+        // Act
+        jeu.Gauche();
+
+        // Assert
+        // Après déplacement à gauche, X doit valoir 4
+        Assert.Equal(4, jeu.TetrinoCourant.PositionOrigine.X);
+
+        // Y ne doit pas changer
+        Assert.Equal(0, jeu.TetrinoCourant.PositionOrigine.Y);
+    }
+
+    // ============================================================
+    // TEST 3
+    // Vérifie que Gauche() ne fait pas sortir le tétrino
+    // en dehors de la grille si X = 0
+    // ============================================================
+    [Fact]
+    public void Gauche_Ne_Depasse_Pas_Le_Bord_Gauche()
+    {
+        // Arrange
+        JeuTetris jeu = new JeuTetris();
+
+        // On place le tétrino tout à gauche
+        jeu.TetrinoCourant.PositionOrigine = new Position(0, 0);
+
+        // Act
+        jeu.Gauche();
+
+        // Assert
+        // X doit rester à 0
+        Assert.Equal(0, jeu.TetrinoCourant.PositionOrigine.X);
+    }
+
+    // ============================================================
+    // TEST 4
+    // Vérifie que Bas() déplace bien le tétrino
+    // d'une case vers le bas si ce n'est pas encore le fond
+    // ============================================================
+    [Fact]
+    public void Bas_Deplace_Bien_Le_Tetrino()
+    {
+        // Arrange
+        JeuTetris jeu = new JeuTetris();
+
+        // On place le tétrino à une position de départ simple
+        jeu.TetrinoCourant.PositionOrigine = new Position(3, 4);
+
+        // Act
+        jeu.Bas();
+
+        // Assert
+        // X ne change pas
+        Assert.Equal(3, jeu.TetrinoCourant.PositionOrigine.X);
+
+        // Y augmente de 1
+        Assert.Equal(5, jeu.TetrinoCourant.PositionOrigine.Y);
+    }
+
+    // ============================================================
+    // TEST 5
+    // Vérifie que Droite() déplace bien le tétrino vers la droite
+    //
+    // Pour ce test, on prépare une forme simple dans TetrinosTab :
+    // un carré avec les positions relatives :
+    // (0,0), (1,0), (0,1), (1,1)
+    //
+    // Le décalage maximum en X est donc 1.
+    // ============================================================
+    [Fact]
+    public void Droite_Deplace_Bien_Le_Tetrino()
+    {
+        // Arrange
+        JeuTetris jeu = new JeuTetris();
+
+        // On prépare une forme simple
+        Tetrino.TetrinosTab = new Position[][]
+        {
+            new Position[]
+            {
+                new Position(0, 0),
+                new Position(1, 0),
+                new Position(0, 1),
+                new Position(1, 1)
+            }
+        };
+
+        // On choisit l'indice 0 dans le tableau des formes
+        jeu.TetrinoCourant.Indice = 0;
+
+        // On place l'origine à X = 3
+        jeu.TetrinoCourant.PositionOrigine = new Position(3, 0);
+
+        // Act
+        jeu.Droite();
+
+        // Assert
+        // Le tétrino doit avancer d'une case
+        Assert.Equal(4, jeu.TetrinoCourant.PositionOrigine.X);
+        Assert.Equal(0, jeu.TetrinoCourant.PositionOrigine.Y);
+    }
+
+    // ============================================================
+    // TEST 6
+    // Vérifie que Tombe() fait descendre le tétrino jusqu'en bas
+    //
+    // Comme ta méthode Tombe() appelle Demarrer() à la fin,
+    // on ne peut pas vérifier directement la dernière position
+    // atteinte juste avant le redémarrage.
+    //
+    // Donc ici, on vérifie surtout que :
+    // - la méthode s'exécute sans erreur
+    // - le tétrino courant existe encore après l'appel
+    // ============================================================
+    [Fact]
+    public void Tombe_Sexecute_Sans_Erreur()
+    {
+        // Arrange
+        JeuTetris jeu = new JeuTetris();
+
+        // On place une origine de départ
+        jeu.TetrinoCourant.PositionOrigine = new Position(2, 0);
+
+        // Act
+        jeu.Tombe();
+
+        // Assert
+        // Le jeu doit toujours avoir un tétrino courant
+        Assert.NotNull(jeu.TetrinoCourant);
+    }
+
+    // ============================================================
+    // TEST 7
+    // Vérifie que Demarrer() initialise bien un tétrino
+    //
+    // Ce test suppose que NouveauTetrino() met en place
+    // PositionOrigine ou au moins un état valide.
+    // ============================================================
+    [Fact]
+    public void Demarrer_Initialise_Le_Tetrino()
+    {
+        // Arrange
+        JeuTetris jeu = new JeuTetris();
+
+        // Act
+        jeu.Demarrer();
+
+        // Assert
+        Assert.NotNull(jeu.TetrinoCourant);
+        Assert.NotNull(jeu.TetrinoCourant.PositionOrigine);
+    }
+
+    // ============================================================
+    // TEST 8
+    // Vérifie que plusieurs appels à Bas() augmentent bien Y
+    // plusieurs fois
+    // ============================================================
+    [Fact]
+    public void Bas_Plusieurs_Fois_Descend_Correctement()
+    {
+        // Arrange
+        JeuTetris jeu = new JeuTetris();
+
+        jeu.TetrinoCourant.PositionOrigine = new Position(1, 1);
+
+        // Act
+        jeu.Bas();
+        jeu.Bas();
+        jeu.Bas();
+
+        // Assert
+        // Y doit avoir augmenté de 3
+        Assert.Equal(4, jeu.TetrinoCourant.PositionOrigine.Y);
     }
 }
