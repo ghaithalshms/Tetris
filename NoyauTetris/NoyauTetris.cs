@@ -30,7 +30,8 @@ public class JeuTetris
         HauteurGrille = 15;
         TetrinoCourant = new Tetrino();
     }
-    // Initialise le jeu avec un nouvau tetrino
+
+    /** Initialise le jeu avec un nouvau tetrino */
     public void Demarrer()
     {
         // Pour demarrer on a besoin d'un nouveau tetrino
