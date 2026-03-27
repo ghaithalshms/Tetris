@@ -52,6 +52,7 @@ public class TestPosition
         Assert.Equal(5, pos.Y);
     }
 }
+
 public class TestTetrino
 {
     /** On vérifie que le tetrino par défaut est bien un carré rouge en (0,0) */

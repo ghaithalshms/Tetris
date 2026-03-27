@@ -40,17 +40,17 @@ public class JeuTetris
     /** Déplace d'une case vers la droite avec vérification */
     public void Droite()
     {
-        // Ici, on va chercher l'indice maximale que X peut atteindre en fonction des positions sélectionnées par Indice.
-        int decalageMax = 0;
+        // Ici on cherche l'indice maximale que X peut atteindre en fonction des positions sélectionnées par Indice.
+        int longueurTetrino = 0;
         Position[] positions = Tetrino.TetrinosTab[this.TetrinoCourant.Indice];
         for (int i = 0; i < positions.Length; i = i + 1)
         {
-            if (positions[i].X > decalageMax)
+            if (positions[i].X > longueurTetrino)
             {
-                decalageMax = positions[i].X;
+                longueurTetrino = positions[i].X;
             }
         }
-        if (LargeurGrille - 1 - (this.TetrinoCourant.PositionOrigine.X + decalageMax) > 0) //LargeurGrille-1 car LargeurGrille est exclu
+        if (LargeurGrille - 1 - (this.TetrinoCourant.PositionOrigine.X + longueurTetrino) > 0) //LargeurGrille-1 car LargeurGrille est exclu
         {
             this.TetrinoCourant.PositionOrigine.X += 1;
         }
@@ -153,10 +153,10 @@ public class Tetrino
     public Position PositionOrigine;
 
     // Méthode trouvée sur StackOverflow (questions/856154) pour avoir la longueur d'une énumération 
-    // Note : ici on pourrait ne pas créer ce tableau en utilisant tout simplement l'énumération avec des casting depuis des entiers pour les choix
+    // Note : ici on pourrait ne pas créer ce tableau en utilisant tout simplement l'énumération avec des casting depuis des entiers pour la génération aléatoire.
     public static TetrinoCouleur[] CouleursTetrinos = new TetrinoCouleur[Enum.GetValues(typeof(TetrinoCouleur)).Length];
     public TetrinoCouleur Couleur;
-    /*  Création de l'objet random à utiliser pour génerer des nombres 'aléeatoires'.
+    /*  Création de l'objet random à utiliser pour génerer des nombres aléeatoires.
         Déclaration de random en tant qu'attribut pour éviter les déclarations inutiles lors de l'appelle de la méthode NouveauTetrino. */
     private static Random random = new Random();
 
@@ -196,14 +196,14 @@ public class Tetrino
         // Un casting a été utilisé pour définir la couleur à partir du nombre généré. On commence à 2 pour exclure les couleurs noire et blanche.
         this.Couleur = (TetrinoCouleur)random.Next(2, Enum.GetValues(typeof(TetrinoCouleur)).Length);
 
-        // Ici, on va chercher l'indice maximale que X peut atteindre en fonction des positions sélectionnées par Indice.
-        int decalageMax = 0;
+        // Ici on cherche l'indice maximale que X peut atteindre en fonction des positions sélectionnées par Indice.
+        int longueurTetrino = 0;
         Position[] positions = TetrinosTab[this.Indice];
         for (int i = 0; i < positions.Length; i = i + 1)
         {
-            if (positions[i].X > decalageMax) decalageMax = positions[i].X;
+            if (positions[i].X > longueurTetrino) longueurTetrino = positions[i].X;
         }
-        int positionOrigineX = random.Next(0, JeuTetris.LargeurGrille - decalageMax); // (JeuTetris.LargeurGrille - decalageMax) exclu
+        int positionOrigineX = random.Next(0, JeuTetris.LargeurGrille - longueurTetrino); // (JeuTetris.LargeurGrille - decalageMax) exclu
         this.PositionOrigine = new Position(positionOrigineX, 0);
     }
 
