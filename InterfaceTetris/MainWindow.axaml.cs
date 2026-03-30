@@ -3,7 +3,7 @@
  * l'ensemble des interactions du jeu.
  * Auteur : Groupe 5.
  * Membres : ALSHAMAS Ghaith, BARROIS Nathan, DENNEMONT Maël, DIOP Awa.
- * Version : 1.2
+ * Version : 1.3
  */
 
 using Avalonia;
@@ -117,11 +117,13 @@ public partial class MainWindow : Window
         Il y a 15 carraux verticalement et 12 horizontallement dont les dimensions sont 22*22
         On décale les carraux horizontals 8 pixels vers la droites à cause de la bordure noire
         Et on décale, de la même raison, les carraux verticales 8 pixels vers le bas.*/
-        int x = 22 * xRJ + 8;
-        int y = 22 * yRJ;
+        int largeurCarre = 22;
+        int hauteurCarre = 22;
+        int x = largeurCarre * xRJ + 8;
+        int y = hauteurCarre * yRJ;
         // dessine le carré à partir des cordonnées x,y en pixel calculés ci-dessus
-        DessinerRectangle(x, y, 22, 22, ConvertirCouleur(TetrinoCouleur.Noir));
-        DessinerRectangle(x + 1, y + 1, 20, 20, ConvertirCouleur(couleur));
+        DessinerRectangle(x, y, largeurCarre, hauteurCarre, ConvertirCouleur(TetrinoCouleur.Noir));
+        DessinerRectangle(x + 1, y + 1, largeurCarre - 2, largeurCarre - 2, ConvertirCouleur(couleur));
     }
 
     /** Réinitialisation du cadre et dessiner le TetrinoCourant */

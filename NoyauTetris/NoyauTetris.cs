@@ -23,12 +23,19 @@ public class JeuTetris
     public static int LargeurGrille;
     public static int HauteurGrille;
     public Tetrino TetrinoCourant;
+    // La grille qui représante les tetrinos figés
+    public Position[,] Grille;
     // Le constructeur, définir les tailles de la grille et le TetrinoCourant
     public JeuTetris()
     {
         LargeurGrille = 12;
         HauteurGrille = 15;
         TetrinoCourant = new Tetrino();
+
+        // On cherche la capacité maximale théorique de la grille pour initaliser le tableau.
+        int capaciteMax = LargeurGrille * HauteurGrille / 4;
+        // Le tableau est 2 dimensionnel : il contient capaciteMax tetrinos qui sont présentés par d'un tableau de 4 cases contentant des Position s.
+        this.Grille = new Position[capaciteMax, 4];
     }
 
     /** Initialise le jeu avec un nouvau tetrino */
@@ -36,6 +43,9 @@ public class JeuTetris
     {
         // Pour demarrer on a besoin d'un nouveau tetrino
         this.TetrinoCourant.NouveauTetrino();
+        // réinitialiser la grille 
+        int capaciteMax = LargeurGrille * HauteurGrille / 4;
+        this.Grille = new Position[capaciteMax, 4];
     }
 
     /** Déplace d'une case vers la droite avec vérification */
