@@ -22,11 +22,16 @@ public partial class MainWindow : Window
     public DispatcherTimer Minuteur;
     // Définit l'attribut Jeu de type JeuTetris
     public JeuTetris Jeu;
+    public static int TailleCarre;
+    public static int TailleBordures;
 
     public MainWindow()
     {
         // Initialise l'attribut Jeu
         Jeu = new JeuTetris();
+
+        TailleCarre = 22;
+        TailleBordures = 8;
 
         InitializeComponent();
         // Défini la taille de la fenêtre à partir des constantes
@@ -41,8 +46,8 @@ public partial class MainWindow : Window
         // Définit le texte de InfoText
         InfoText.Text = "Zone texte";
         // Défini la taille du canvas à partir des constantes
-        TetrisCanvas.Width = JeuTetris.LargeurGrille * 22 + 16; //+16 pour les bordures noires : 8 à gauche et 8 à droite
-        TetrisCanvas.Height = JeuTetris.HauteurGrille * 22 + 8;//+8 pour la bordure noire de bas
+        TetrisCanvas.Width = JeuTetris.LargeurGrille * TailleCarre + TailleBordures * 2; //+TailleBordures*2 pour les bordures noires : TailleBordures à gauche et TailleBordures à droite
+        TetrisCanvas.Height = JeuTetris.HauteurGrille * TailleCarre + TailleBordures;//+TailleBordures pour la bordure noire de bas
         // Défini la taille des boutons à partir des constantes
         StartButton.Width = TetrisCanvas.Width;
         StartButton.Height = 30;
@@ -105,7 +110,7 @@ public partial class MainWindow : Window
         /*On dessine un rectangle noir qui commence au coin haut gauche et va jusqu'au coin bas droit.
         Dedans, on dessine un rectangle blanc pour avoir le même résultat que la Figure 2.*/
         DessinerRectangle(0, 0, (int)TetrisCanvas.Width, (int)TetrisCanvas.Height, ConvertirCouleur(TetrinoCouleur.Noir));
-        DessinerRectangle(8, 0, (int)TetrisCanvas.Width - 16, (int)TetrisCanvas.Height - 8, ConvertirCouleur(TetrinoCouleur.Blanc));
+        DessinerRectangle(TailleBordures, 0, (int)TetrisCanvas.Width - TailleBordures * 2, (int)TetrisCanvas.Height - TailleBordures, ConvertirCouleur(TetrinoCouleur.Blanc));
     }
 
     /**  prend en argument les coordonnées du carré
@@ -113,17 +118,16 @@ public partial class MainWindow : Window
     voulu dans la zone graphique TetrisCanva. */
     public void DessinerCarre(int xRJ, int yRJ, TetrinoCouleur couleur)
     {
-        /* On dessine un carré noir de taille 22x22, ensuite on dessine le carré coloré dedans de taille 20x20 
-        Il y a 15 carraux verticalement et 12 horizontallement dont les dimensions sont 22*22
-        On décale les carraux horizontals 8 pixels vers la droites à cause de la bordure noire
-        Et on décale, de la même raison, les carraux verticales 8 pixels vers le bas.*/
-        int largeurCarre = 22;
-        int hauteurCarre = 22;
-        int x = largeurCarre * xRJ + 8;
-        int y = hauteurCarre * yRJ;
+        /* On dessine un carré noir de taille TailleCarre*TailleCarre, ensuite on dessine le carré coloré dedans de taille (TailleCarre-2)*(TailleCarre*2) 
+        Il y a JeuTetris.HauteurGrille carraux verticalement et JeuTetris.LargeurGrille horizontallement dont les dimensions sont TailleCarre*TailleCarre
+        On décale les carraux horizontals TailleBordures pixels vers la droites à cause de la bordure noire
+        Et on décale, de la même raison, les carraux verticales TailleBordures pixels vers le bas.*/
+
+        int x = TailleCarre * xRJ + TailleBordures;
+        int y = TailleCarre * yRJ;
         // dessine le carré à partir des cordonnées x,y en pixel calculés ci-dessus
-        DessinerRectangle(x, y, largeurCarre, hauteurCarre, ConvertirCouleur(TetrinoCouleur.Noir));
-        DessinerRectangle(x + 1, y + 1, largeurCarre - 2, largeurCarre - 2, ConvertirCouleur(couleur));
+        DessinerRectangle(x, y, TailleCarre, TailleCarre, ConvertirCouleur(TetrinoCouleur.Noir));
+        DessinerRectangle(x + 1, y + 1, TailleCarre - 2, TailleCarre - 2, ConvertirCouleur(couleur));
     }
 
     /** Réinitialisation du cadre et dessiner le TetrinoCourant et la Grille */
