@@ -1,4 +1,6 @@
-﻿namespace NoyauTetris;
+﻿using System.Xml;
+
+namespace NoyauTetris;
 
 
 /** Les couleur qui seront utilisée pour les carrés */
@@ -23,19 +25,25 @@ public class JeuTetris
     public static int LargeurGrille;
     public static int HauteurGrille;
     public Tetrino TetrinoCourant;
-    // La grille qui représante les tetrinos figés
-    public Position[,] Grille;
+    // La grille qui représante les tetrinos figés : true s'il y a un carré, false sinon.
+    public TetrinoCouleur[,] Grille;
     // Le constructeur, définir les tailles de la grille et le TetrinoCourant
     public JeuTetris()
     {
         LargeurGrille = 12;
         HauteurGrille = 15;
         TetrinoCourant = new Tetrino();
-
-        // On cherche la capacité maximale théorique de la grille pour initaliser le tableau.
-        int capaciteMax = LargeurGrille * HauteurGrille / 4;
-        // Le tableau est 2 dimensionnel : il contient capaciteMax tetrinos qui sont présentés par d'un tableau de 4 cases contentant des Position s.
-        this.Grille = new Position[capaciteMax, 4];
+        // Le tableau est 2 dimensionnel : il contient LargeurGrille colonnes et HauteurGrille lignes
+        // 'new bool[x, y]' crée un tableau rempli de 'false' par défaut
+        this.Grille = new TetrinoCouleur[LargeurGrille, HauteurGrille];
+        // Le tableau ne contient que des carrés blancs
+        for (int y = 0; y < HauteurGrille; y++)
+        {
+            for (int x = 0; x < LargeurGrille; x++)
+            {
+                Grille[x, y] = TetrinoCouleur.Blanc;
+            }
+        }
     }
 
     /** Initialise le jeu avec un nouvau tetrino */
@@ -44,11 +52,17 @@ public class JeuTetris
         // Pour demarrer on a besoin d'un nouveau tetrino
         this.TetrinoCourant.NouveauTetrino();
         // réinitialiser la grille 
-        int capaciteMax = LargeurGrille * HauteurGrille / 4;
-        this.Grille = new Position[capaciteMax, 4];
+        this.Grille = new TetrinoCouleur[LargeurGrille, HauteurGrille];
+        for (int y = 0; y < HauteurGrille; y++)
+        {
+            for (int x = 0; x < LargeurGrille; x++)
+            {
+                Grille[x, y] = TetrinoCouleur.Blanc;
+            }
+        }
     }
 
-    /** Déplace d'une case vers la droite avec vérification */
+    /** Déplace d'une case vers la droite avec vérification cadre et grille */
     public void Droite()
     {
         // Ici on cherche l'indice maximale que X peut atteindre en fonction des positions sélectionnées par Indice.
@@ -63,43 +77,140 @@ public class JeuTetris
         }
         if (LargeurGrille - 1 - (this.TetrinoCourant.PositionOrigine.X + longueurTetrino) > 0) //LargeurGrille-1 car LargeurGrille est exclu
         {
-            this.TetrinoCourant.PositionOrigine.X += 1;
+            // Vérifier si le carré à droite est blanc (vide) pour pouvoir se déplacer, pas de hors cadre grâce à la vérification ci-dessus
+            if (this.Grille[this.TetrinoCourant.PositionOrigine.X + longueurTetrino, this.TetrinoCourant.PositionOrigine.Y] == TetrinoCouleur.Blanc)
+            {
+                this.TetrinoCourant.PositionOrigine.X += 1;
+            }
         }
     }
 
-    /** Déplace d'une case vers la gauche avec vérification */
+    /** Déplace d'une case vers la gauche avec vérification cadre et grille */
     public void Gauche()
     {
         if (this.TetrinoCourant.PositionOrigine.X > 0)
         {
-            this.TetrinoCourant.PositionOrigine.X -= 1;
+            // Vérifier si le carré à gauche est blanc (vide) pour pouvoir se déplacer, pas de hors cadre grâce à la vérification ci-dessus
+            if (this.Grille[this.TetrinoCourant.PositionOrigine.X - 1, this.TetrinoCourant.PositionOrigine.Y] == TetrinoCouleur.Blanc)
+            {
+                this.TetrinoCourant.PositionOrigine.X -= 1;
+            }
         }
     }
 
 
-    /** Déplace d'une case vers le bas avec vérification
-     Si le tetrino arrive en bas, il disparaît et un nouveau apparaît */
+    /** Déplace d'une case vers le bas avec vérification, s'il ne peut plus descendre, le fige dans la grille, et enfin en crée un nouveau */
     public void Bas()
     {
-        if (this.TetrinoCourant.PositionOrigine.Y < HauteurGrille - 1)
+        if (PeutDescendre())
         {
-            this.TetrinoCourant.PositionOrigine.Y += 1; // HauteurGrille-1 car HauteurGrille est exclu
+            TetrinoCourant.PositionOrigine.Y += 1;
         }
         else
         {
-            Demarrer();
+            this.FigerTetrino();
+            this.TetrinoCourant = new Tetrino();
+            this.TetrinoCourant.NouveauTetrino();
         }
     }
-    /** Fait tomber le tetrino jusqu'en bas, puis en crée un nouveau */
+
+    /** Fait tomber le tetrino jusqu'en bas, le fige dans la grille, et enfin en crée un nouveau */
     public void Tombe()
     {
-        while (this.TetrinoCourant.PositionOrigine.Y < HauteurGrille - 1)
+        while (PeutDescendre())
         {
-            Bas();
+            TetrinoCourant.PositionOrigine.Y += 1;
         }
-        Demarrer();
+        this.FigerTetrino();
+        this.TetrinoCourant = new Tetrino();
+        this.TetrinoCourant.NouveauTetrino();
     }
+
+    public bool PeutDescendre()
+    {
+        foreach (Position pos in Tetrino.TetrinosTab[this.TetrinoCourant.Indice])
+        {
+            int x = TetrinoCourant.PositionOrigine.X + pos.X;
+            int y = TetrinoCourant.PositionOrigine.Y + pos.Y;
+            // Vérifie le bas du cadre
+            if (y + 1 >= HauteurGrille)
+            {
+                return false;
+            }
+            // Vérifier si le carré n'est pas au dessus du cadre et s'il y a déjà un carré en dessous
+            if (y >= 0 && Grille[x, y + 1] != TetrinoCouleur.Blanc)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+    /** on donne y et on fait une boucle pour parcourir tout les x et si on constate y'a 
+     une partie blanc alors on return false sinon la ligne est pleine  */
+
+    public bool LignePleine(int ligne)
+    {
+        for (int x = 0; x < LargeurGrille; x++)
+        {
+            if (Grille[x, ligne] == TetrinoCouleur.Blanc)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /** pour la premier partie une boucle sur une boucle pour que quand on supprime une ligne tout les lignes
+     qui etait au dessus auront comme cordonne x et y+1*/
+    public void SupprimerLigne(int ligne)
+    {
+        for (int y = ligne; y > 0; y--)
+        {
+            for (int x = 0; x < LargeurGrille; x++)
+            {
+                Grille[x, y] = Grille[x, y - 1];
+            }
+        }
+        // On vide la première ligne
+        for (int x = 0; x < LargeurGrille; x++)
+        {
+            Grille[x, 0] = TetrinoCouleur.Blanc;
+        }
+    }
+
+    public void SupprimerLignesPleines()
+    {
+        for (int y = HauteurGrille - 1; y >= 0; y--)
+        {
+            if (LignePleine(y))
+            {
+                SupprimerLigne(y);
+                y++; // on revérifie cette ligne après décalage
+            }
+        }
+    }
+
+    public void FigerTetrino()
+    {
+        foreach (Position pos in Tetrino.TetrinosTab[this.TetrinoCourant.Indice])
+        {
+            int x = TetrinoCourant.PositionOrigine.X + pos.X;
+            int y = TetrinoCourant.PositionOrigine.Y + pos.Y;
+
+            // Sécurité pour éviter les erreurs hors grille
+            if (x >= 0 && x < LargeurGrille && y >= 0 && y < HauteurGrille)
+            {
+                Grille[x, y] = TetrinoCourant.Couleur;
+            }
+        }
+        SupprimerLignesPleines();
+    }
+
+
 }
+
 
 /** La classe qui définit la position d’un carré à l’aide de
     ses coordonnées X et Y dans le jeu et qui contient des méthodes pour déplacer
@@ -200,7 +311,7 @@ public class Tetrino
     }
 
     /** Mettre à jour le tetrino en tirant aléatoirement une Indice 
-    du TetrinosTab, une positionOrigine et une Couleur */
+    du TetrinosTab, une positionOrigine et une Couleur en faisant la vérification du cadre.*/
     public void NouveauTetrino()
     {
         this.Indice = random.Next(0, TetrinosTab.Length);

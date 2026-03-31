@@ -126,7 +126,7 @@ public partial class MainWindow : Window
         DessinerRectangle(x + 1, y + 1, largeurCarre - 2, largeurCarre - 2, ConvertirCouleur(couleur));
     }
 
-    /** Réinitialisation du cadre et dessiner le TetrinoCourant */
+    /** Réinitialisation du cadre et dessiner le TetrinoCourant et la Grille */
     public void DessinerJeu()
     {
         // Supprime le cadre et son contenu, une sorte de reset
@@ -135,18 +135,29 @@ public partial class MainWindow : Window
         // Recréer le cadre pour le rafraichir
         DessinerCadre();
 
-        // Prend les coordonées des carrés du Tetrino courant
-        Position[] positions = Tetrino.TetrinosTab[Jeu.TetrinoCourant.Indice];
+        // Dessiner la grille (les tétrinos figés)
+        for (int y = 0; y < JeuTetris.HauteurGrille; y++)
+        {
+            for (int x = 0; x < JeuTetris.LargeurGrille; x++)
+            {
+                // Si la case n'est pas blanche, on dessine un carré de la couleur correspondante
+                if (Jeu.Grille[x, y] != TetrinoCouleur.Blanc)
+                {
+                    DessinerCarre(x, y, Jeu.Grille[x, y]);
+                }
+            }
+        }
+
+        //Prend les coordonées des carrés du Tetrino courant en prenant en compte l'origine
+        Position[] positions = Jeu.TetrinoCourant.Positions();
 
         foreach (Position pos in positions)
         {
-            int x = Jeu.TetrinoCourant.PositionOrigine.X + pos.X;
-            int y = Jeu.TetrinoCourant.PositionOrigine.Y + pos.Y;
-
-            // Permet de prendre la forme du Tetrino courant à travers ses coordonéees
-            if (y >= 0)
+            // Ne dessiner que les carrés qui sont dans le cadre
+            if (pos.Y >= 0)
             {
-                DessinerCarre(x, y, Jeu.TetrinoCourant.Couleur);
+                // Permet de prendre la forme du Tetrino courant à travers ses coordonéees
+                DessinerCarre(pos.X, pos.Y, Jeu.TetrinoCourant.Couleur);
             }
         }
     }
