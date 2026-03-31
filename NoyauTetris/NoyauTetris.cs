@@ -314,6 +314,7 @@ public class Tetrino
     du TetrinosTab, une positionOrigine et une Couleur en faisant la vérification du cadre.*/
     public void NouveauTetrino()
     {
+        //FIXME: IL FAUT VÉRIFIER S'IL Y A DÉJÀ DES CARRÉS AVANT DE DONNER LA POSITION !!!
         this.Indice = random.Next(0, TetrinosTab.Length);
         // Un casting a été utilisé pour définir la couleur à partir du nombre généré. On commence à 2 pour exclure les couleurs noire et blanche.
         this.Couleur = (TetrinoCouleur)random.Next(2, Enum.GetValues(typeof(TetrinoCouleur)).Length);
