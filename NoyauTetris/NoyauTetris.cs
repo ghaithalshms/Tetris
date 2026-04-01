@@ -30,8 +30,8 @@ public class JeuTetris
     // Le constructeur, définir les tailles de la grille et le TetrinoCourant
     public JeuTetris()
     {
-        LargeurGrille = 12;
-        HauteurGrille = 15;
+        LargeurGrille = 10;
+        HauteurGrille = 20;
         TetrinoCourant = new Tetrino();
         // Le tableau est 2 dimensionnel : il contient LargeurGrille colonnes et HauteurGrille lignes
         // 'new bool[x, y]' crée un tableau rempli de 'false' par défaut
@@ -77,6 +77,7 @@ public class JeuTetris
         }
         if (LargeurGrille - 1 - (this.TetrinoCourant.PositionOrigine.X + longueurTetrino) > 0) //LargeurGrille-1 car LargeurGrille est exclu
         {
+            // FIXME: il faut faire la vérification pour les 4 carrés !!!
             // Vérifier si le carré à droite est blanc (vide) pour pouvoir se déplacer, pas de hors cadre grâce à la vérification ci-dessus
             if (this.Grille[this.TetrinoCourant.PositionOrigine.X + longueurTetrino, this.TetrinoCourant.PositionOrigine.Y] == TetrinoCouleur.Blanc)
             {
@@ -126,6 +127,7 @@ public class JeuTetris
         this.TetrinoCourant.NouveauTetrino();
     }
 
+    /** Retourne true ou false, vérifie si le tetrino peut encore descenre ou pas */
     public bool PeutDescendre()
     {
         foreach (Position pos in Tetrino.TetrinosTab[this.TetrinoCourant.Indice])
@@ -147,8 +149,7 @@ public class JeuTetris
     }
 
 
-    /** on donne y et on fait une boucle pour parcourir tout les x et si on constate y'a 
-     une partie blanc alors on return false sinon la ligne est pleine  */
+    /** Retourne true ou false, vérifie si la ligne est pleine.  */
 
     public bool LignePleine(int ligne)
     {
@@ -162,8 +163,7 @@ public class JeuTetris
         return true;
     }
 
-    /** pour la premier partie une boucle sur une boucle pour que quand on supprime une ligne tout les lignes
-     qui etait au dessus auront comme cordonne x et y+1*/
+    /** On efface la ligne d'indice donnée en tout décalant vers le bas. */
     public void SupprimerLigne(int ligne)
     {
         for (int y = ligne; y > 0; y--)
@@ -180,6 +180,7 @@ public class JeuTetris
         }
     }
 
+    /** On efface les lignes pleines. */
     public void SupprimerLignesPleines()
     {
         for (int y = HauteurGrille - 1; y >= 0; y--)
@@ -187,7 +188,7 @@ public class JeuTetris
             if (LignePleine(y))
             {
                 SupprimerLigne(y);
-                y++; // on revérifie cette ligne après décalage
+                y++; // on revérifie cette ligne après décalage car le contenu a changé
             }
         }
     }

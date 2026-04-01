@@ -28,7 +28,7 @@ public class TestPosition
         Assert.Equal(5, pos.Y);
     }
 
-    /** On vérifie que le déplacement à gauche décrémente bien X même s'il va sortir du cadre : le noyau ne doit pas gérer cela */
+    /** On vérifie que le déplacement à gauche décrémente bien X même s'il va sortir du cadre : La classe Position ne doit pas gérer cela */
     [Fact]
     public void TestPosition_DeplacementGauche_HorsCadre()
     {

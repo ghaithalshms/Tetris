@@ -24,43 +24,48 @@ public partial class MainWindow : Window
     public JeuTetris Jeu;
     public static int TailleCarre;
     public static int TailleBordures;
+    public static int TailleMerges;
+    public static int TailleHauteurBouton;
 
     public MainWindow()
     {
         // Initialise l'attribut Jeu
         Jeu = new JeuTetris();
 
-        TailleCarre = 22;
-        TailleBordures = 8;
+        TailleCarre = 20;
+        TailleBordures = 10;
+        TailleMerges = 50;
+        TailleHauteurBouton = 36;
 
         InitializeComponent();
-        // Défini la taille de la fenêtre à partir des constantes
-        //LargeurFenetre =
-        //LargeurCanvas + 2×Cadre + 2×Marges
-        //= 264 + 24 + 80
-        //= 368 px
-        Width = 368;
-        //HauteurFenetre =
-        //330 + 24 + 80 + 40 + 40 + 40 + 40
-        Height = 594;
         // Définit le texte de InfoText
         InfoText.Text = "Zone texte";
+
         // Défini la taille du canvas à partir des constantes
         TetrisCanvas.Width = JeuTetris.LargeurGrille * TailleCarre + TailleBordures * 2; //+TailleBordures*2 pour les bordures noires : TailleBordures à gauche et TailleBordures à droite
         TetrisCanvas.Height = JeuTetris.HauteurGrille * TailleCarre + TailleBordures;//+TailleBordures pour la bordure noire de bas
+
         // Défini la taille des boutons à partir des constantes
         StartButton.Width = TetrisCanvas.Width;
-        StartButton.Height = 30;
+        StartButton.Height = TailleHauteurBouton;
         QuitButton.Width = TetrisCanvas.Width;
-        QuitButton.Height = 30;
+        QuitButton.Height = TailleHauteurBouton;
+
+        // Width = TetrisCanvas.Width + (2 * Marges )
+        Width = TetrisCanvas.Width + TailleMerges * 2;
+        // Height = TetrisCanvas.Height + Boutons + (2 * Marges)
+        Height = TetrisCanvas.Height + TailleHauteurBouton * 2 + TailleMerges * 2;
+
         // Initialise le minuteur pour faire descendre le tetrino courant toutes les 500 milisecondes
         Minuteur = new DispatcherTimer();
         Minuteur.Interval = TimeSpan.FromMilliseconds(500);
         Minuteur.Tick += (s, e) => { BasInterface(); };
+
         // détecte le clic sur le bouton Démarrer, déclanche l'évènement Demarrer, puis appelle la méthode DemarrerTetris
         StartButton.Click += (s, e) => { DemarrerInterface(); };
         // détecte le clic sur le bouton Quitter, déclanche l'évènement Quiter, puis ferme la fenêtre
         QuitButton.Click += (s, e) => { Close(); };
+
         // détecte la pression d'une touche du clavier, et déclanche l'évènement correspondant
         KeyDown += (s, e) =>
         {
