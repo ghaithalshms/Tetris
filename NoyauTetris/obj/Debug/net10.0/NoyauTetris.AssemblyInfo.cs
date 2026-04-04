@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NoyauTetris")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cfa9dda3abffdf6db7a8890d1971997c985956b0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9b9736abfe817e098987324a6476e10ce25e0a9")]
 [assembly: System.Reflection.AssemblyProductAttribute("NoyauTetris")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NoyauTetris")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

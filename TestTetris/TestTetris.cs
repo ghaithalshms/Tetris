@@ -3,6 +3,7 @@
 namespace TestTetris;
 
 public class TestPosition
+// ***** Nathan *****
 {
     /** On vérifie que le déplacement en bas augmente la valeur de Y */
     [Fact]
@@ -55,6 +56,8 @@ public class TestPosition
 
 public class TestTetrino
 {
+    // ***** Ghaith *****
+
     /** On vérifie que le tetrino par défaut est bien un carré rouge en (0,0) */
     [Fact]
     public void TestTetrino_InitialisationParDefaut()
@@ -153,6 +156,113 @@ public class TestTetrino
 
 public class TestJeuTetris
 {
+    // ***** Ghaith *****
+
+    /** On vérifie que le constructeur de JeuTetris initialise correctement la taille de la grille et le tétrino courant */
+    [Fact]
+    public void TestJeuTetris_InitialisationEtDemarrer()
+    {
+        JeuTetris jeu = new JeuTetris();
+
+        Assert.Equal(10, JeuTetris.LargeurGrille);
+        Assert.Equal(20, JeuTetris.HauteurGrille);
+
+        jeu.Demarrer();
+        for (int y = 0; y < JeuTetris.HauteurGrille; y++)
+        {
+            for (int x = 0; x < JeuTetris.LargeurGrille; x++)
+            {
+                Assert.Equal(TetrinoCouleur.Blanc, jeu.Grille[x, y]);
+            }
+        }
+        Assert.NotNull(jeu.TetrinoCourant);
+    }
+
+    /** On vérifie que la méthode PeutSeDeplacer détecte correctement les collisions avec les bordures et les carrés figés */
+    [Fact]
+    public void TestJeuTetris_PeutSeDeplacer_Collisions()
+    {
+        JeuTetris jeu = new JeuTetris();
+        jeu.TetrinoCourant.Indice = 0; // Carré (2x2)
+        jeu.TetrinoCourant.PositionOrigine = new Position(0, 0);
+
+        // Test bordure gauche
+        Assert.False(jeu.PeutSeDeplacer(-1, 0));
+
+        // Test bordure droite
+        jeu.TetrinoCourant.PositionOrigine = new Position(JeuTetris.LargeurGrille - 2, 0); //dernière position possible à droite
+        Assert.False(jeu.PeutSeDeplacer(1, 0));
+
+        // Test collision avec un carré déjà présent dans la grille
+        jeu.TetrinoCourant.PositionOrigine = new Position(5, 5);
+        jeu.Grille[5, 6] = TetrinoCouleur.Rouge;
+        Assert.False(jeu.PeutSeDeplacer(0, 1));
+    }
+
+    /** On vérifie que les méthodes Droite et Gauche déplacent l'origine du tétrino seulement si le mouvement est valide */
+    [Fact]
+    public void TestJeuTetris_MouvementsHorizontaux()
+    {
+        JeuTetris jeu = new JeuTetris();
+        jeu.TetrinoCourant.Indice = 0;
+        jeu.TetrinoCourant.PositionOrigine = new Position(5, 5);
+
+        jeu.Droite();
+        Assert.Equal(6, jeu.TetrinoCourant.PositionOrigine.X);
+
+        jeu.Gauche();
+        Assert.Equal(5, jeu.TetrinoCourant.PositionOrigine.X);
+
+        // On vérifie le blocage contre le bord gauche
+        jeu.TetrinoCourant.PositionOrigine = new Position(0, 5);
+        jeu.Gauche();
+        Assert.Equal(0, jeu.TetrinoCourant.PositionOrigine.X);
+    }
+
+    /** On vérifie que la méthode Bas déplace le tétrino ou provoque son figeage s'il ne peut plus descendre */
+    [Fact]
+    public void TestJeuTetris_Bas_Et_FigeageAutomatique()
+    {
+        JeuTetris jeu = new JeuTetris();
+        jeu.TetrinoCourant.Indice = 1; // Barre Horizontale
+        jeu.TetrinoCourant.Couleur = TetrinoCouleur.Bleu;
+
+        // On place le tétrino au niveau du sol
+        jeu.TetrinoCourant.PositionOrigine = new Position(0, 19);
+
+        // Le mouvement est impossible, l'appel à Bas() doit figer le tétrino et en créer un nouveau
+        jeu.Bas();
+
+        Assert.Equal(TetrinoCouleur.Bleu, jeu.Grille[0, 19]);
+        // Le Y du nouveau tétrino est initialisé à -1 par NouveauTetrino()
+        Assert.Equal(-1, jeu.TetrinoCourant.PositionOrigine.Y);
+    }
+
+    /** On vérifie que FigerTetrino inscrit les couleurs dans la grille et déclenche la suppression des lignes pleines */
+    [Fact]
+    public void TestJeuTetris_FigerTetrino_Et_NettoyageLigne()
+    {
+        JeuTetris jeu = new JeuTetris();
+
+        // On pré-remplit une ligne presque complète
+        for (int x = 1; x < JeuTetris.LargeurGrille; x++)
+        {
+            jeu.Grille[x, 19] = TetrinoCouleur.Jaune;
+        }
+
+        // On positionne un tétrino pour compléter la ligne
+        jeu.TetrinoCourant.Indice = 2;
+        jeu.TetrinoCourant.Couleur = TetrinoCouleur.Rouge;
+        jeu.TetrinoCourant.PositionOrigine = new Position(0, 19);
+
+        jeu.FigerTetrino();
+
+        // La ligne 19 étant pleine, elle doit être supprimée (remplacée par la ligne vide du dessus)
+        Assert.Equal(TetrinoCouleur.Blanc, jeu.Grille[1, 19]);
+    }
+
+    // ***** Awa *****
+
     // ============================================================
     // TEST 1
     // Vérifie que le constructeur de JeuTetris initialise bien :
@@ -363,4 +473,6 @@ public class TestJeuTetris
         // Y doit avoir augmenté de 3
         Assert.Equal(4, jeu.TetrinoCourant.PositionOrigine.Y);
     }
+
+
 }
