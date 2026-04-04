@@ -27,6 +27,10 @@ public class JeuTetris
     public Tetrino TetrinoCourant;
     // La grille qui représante les tetrinos figés : true s'il y a un carré, false sinon.
     public TetrinoCouleur[,] Grille;
+    /*  Création de l'objet random à utiliser pour génerer des nombres aléeatoires.
+    Déclaration de random en tant qu'attribut pour éviter les déclarations inutiles lors de l'appelle de la méthode NouveauTetrino. */
+    private static Random random = new Random();
+
     // Le constructeur, définir les tailles de la grille et le TetrinoCourant
     public JeuTetris()
     {
@@ -50,7 +54,7 @@ public class JeuTetris
     public void Demarrer()
     {
         // Pour demarrer on a besoin d'un nouveau tetrino
-        this.TetrinoCourant.NouveauTetrino();
+        this.NouveauTetrino();
         // réinitialiser la grille 
         this.Grille = new TetrinoCouleur[LargeurGrille, HauteurGrille];
         for (int y = 0; y < HauteurGrille; y++)
@@ -62,48 +66,81 @@ public class JeuTetris
         }
     }
 
+
+    /** Mettre à jour le tetrino en tirant aléatoirement une Indice 
+    du TetrinosTab, une positionOrigine et une Couleur en faisant la vérification du cadre.*/
+    public void NouveauTetrino()
+    {
+        //FIXME: Il faut vérifier si le tetrino peut loger dans la grille avant d'apparaitre
+        this.TetrinoCourant.Indice = random.Next(0, Tetrino.TetrinosTab.Length);
+        // Un casting a été utilisé pour définir la couleur à partir du nombre généré. On commence à 2 pour exclure les couleurs noire et blanche.
+        this.TetrinoCourant.Couleur = (TetrinoCouleur)random.Next(2, Enum.GetValues(typeof(TetrinoCouleur)).Length);
+
+        // Ici on cherche l'indice maximale que X peut atteindre en fonction des positions sélectionnées par Indice.
+        int longueurTetrino = 0;
+        int hauteurTetrino = 0;
+        Position[] positions = Tetrino.TetrinosTab[this.TetrinoCourant.Indice];
+        for (int i = 0; i < positions.Length; i = i + 1) //ici on met +1 car les indices commencent à 0
+        {
+            if (positions[i].X + 1 > longueurTetrino) longueurTetrino = positions[i].X + 1;
+            if (positions[i].Y + 1 > hauteurTetrino) hauteurTetrino = positions[i].Y + 1;
+        }
+        int positionOrigineX = random.Next(0, JeuTetris.LargeurGrille - longueurTetrino + 1); // +1 car (JeuTetris.LargeurGrille - longueurTetrino) est exclu et qu'on a enlevé la longueur
+        Position origine = new Position(positionOrigineX, -1); //-1 pour que le tetrino qui veut descendre puisse être vérifié s'il le peut 
+        this.TetrinoCourant.PositionOrigine = origine;
+
+        /*// Pour savoir si le tetrino peut loger, on va vérifier s'il peut descendre hauteurTetrino fois
+        bool peutLoger = true;
+        for (int i = 1; i <= hauteurTetrino; i++)
+        {
+            if (this.TetrinoCourant.Positions()[i - 1].Y + i < 0 || !PeutSeDeplacer(0, i))
+            {
+                peutLoger = false;
+                break;
+            }
+        }
+        if (!peutLoger)
+        {
+            Console.WriteLine("***** Game Over *****");
+        }*/
+    }
+
+    /** Vérifier si le tetrino peut se déplacer, créée pour ne pas répeter le code dans les méthodes Droite, Gauche et Bas */
+    public bool PeutSeDeplacer(int deltaX, int deltaY)
+    {
+        foreach (Position p in this.TetrinoCourant.Positions())
+        {
+            int nouveauX = p.X + deltaX;
+            int nouveauY = p.Y + deltaY;
+
+            // Vérifier les bordures
+            if (nouveauX < 0 || nouveauX >= LargeurGrille || nouveauY >= HauteurGrille)
+                return false;
+
+            // Vérifier la collision avec les tetrinos figés (si on est dans la grille, pas au dessus)
+            if (nouveauY >= 0 && Grille[nouveauX, nouveauY] != TetrinoCouleur.Blanc)
+                return false;
+        }
+        return true;
+    }
+
     /** Déplace d'une case vers la droite avec vérification cadre et grille */
     public void Droite()
     {
-        // Ici on cherche l'indice maximale que X peut atteindre en fonction des positions sélectionnées par Indice.
-        int longueurTetrino = 0;
-        Position[] positions = Tetrino.TetrinosTab[this.TetrinoCourant.Indice];
-        for (int i = 0; i < positions.Length; i = i + 1)
-        {
-            if (positions[i].X > longueurTetrino)
-            {
-                longueurTetrino = positions[i].X;
-            }
-        }
-        if (LargeurGrille - 1 - (this.TetrinoCourant.PositionOrigine.X + longueurTetrino) > 0) //LargeurGrille-1 car LargeurGrille est exclu
-        {
-            // FIXME: il faut faire la vérification pour les 4 carrés !!!
-            // Vérifier si le carré à droite est blanc (vide) pour pouvoir se déplacer, pas de hors cadre grâce à la vérification ci-dessus
-            if (this.Grille[this.TetrinoCourant.PositionOrigine.X + longueurTetrino, this.TetrinoCourant.PositionOrigine.Y] == TetrinoCouleur.Blanc)
-            {
-                this.TetrinoCourant.PositionOrigine.X += 1;
-            }
-        }
+        if (PeutSeDeplacer(1, 0)) this.TetrinoCourant.PositionOrigine.X += 1;
     }
 
     /** Déplace d'une case vers la gauche avec vérification cadre et grille */
     public void Gauche()
     {
-        if (this.TetrinoCourant.PositionOrigine.X > 0)
-        {
-            // Vérifier si le carré à gauche est blanc (vide) pour pouvoir se déplacer, pas de hors cadre grâce à la vérification ci-dessus
-            if (this.Grille[this.TetrinoCourant.PositionOrigine.X - 1, this.TetrinoCourant.PositionOrigine.Y] == TetrinoCouleur.Blanc)
-            {
-                this.TetrinoCourant.PositionOrigine.X -= 1;
-            }
-        }
+        if (PeutSeDeplacer(-1, 0)) this.TetrinoCourant.PositionOrigine.X -= 1;
     }
 
 
     /** Déplace d'une case vers le bas avec vérification, s'il ne peut plus descendre, le fige dans la grille, et enfin en crée un nouveau */
     public void Bas()
     {
-        if (PeutDescendre())
+        if (PeutSeDeplacer(0, 1))
         {
             TetrinoCourant.PositionOrigine.Y += 1;
         }
@@ -111,43 +148,21 @@ public class JeuTetris
         {
             this.FigerTetrino();
             this.TetrinoCourant = new Tetrino();
-            this.TetrinoCourant.NouveauTetrino();
+            this.NouveauTetrino();
         }
     }
 
     /** Fait tomber le tetrino jusqu'en bas, le fige dans la grille, et enfin en crée un nouveau */
     public void Tombe()
     {
-        while (PeutDescendre())
+        while (PeutSeDeplacer(0, 1))
         {
             TetrinoCourant.PositionOrigine.Y += 1;
         }
         this.FigerTetrino();
         this.TetrinoCourant = new Tetrino();
-        this.TetrinoCourant.NouveauTetrino();
+        this.NouveauTetrino();
     }
-
-    /** Retourne true ou false, vérifie si le tetrino peut encore descenre ou pas */
-    public bool PeutDescendre()
-    {
-        foreach (Position pos in Tetrino.TetrinosTab[this.TetrinoCourant.Indice])
-        {
-            int x = TetrinoCourant.PositionOrigine.X + pos.X;
-            int y = TetrinoCourant.PositionOrigine.Y + pos.Y;
-            // Vérifie le bas du cadre
-            if (y + 1 >= HauteurGrille)
-            {
-                return false;
-            }
-            // Vérifier si le carré n'est pas au dessus du cadre et s'il y a déjà un carré en dessous
-            if (y >= 0 && Grille[x, y + 1] != TetrinoCouleur.Blanc)
-            {
-                return false;
-            }
-        }
-        return true;
-    }
-
 
     /** Retourne true ou false, vérifie si la ligne est pleine.  */
 
@@ -195,8 +210,13 @@ public class JeuTetris
 
     public void FigerTetrino()
     {
-        foreach (Position pos in Tetrino.TetrinosTab[this.TetrinoCourant.Indice])
+        /* On fait le contrôle en commençant par la fin 
+         pour savoir s'il va avoir un carré qui ne vas pas loger dans la grille */
+
+        for (int i = Tetrino.TetrinosTab[this.TetrinoCourant.Indice].Length - 1; i >= 0; i--)
+        // foreach (Position pos in Tetrino.TetrinosTab[this.TetrinoCourant.Indice])
         {
+            Position pos = Tetrino.TetrinosTab[this.TetrinoCourant.Indice][i];
             int x = TetrinoCourant.PositionOrigine.X + pos.X;
             int y = TetrinoCourant.PositionOrigine.Y + pos.Y;
 
@@ -205,8 +225,14 @@ public class JeuTetris
             {
                 Grille[x, y] = TetrinoCourant.Couleur;
             }
+            else
+            {
+                Console.WriteLine("***** Game Over *****");
+                break; // si un carré est hors cadre, aucun carré ne sera ajouté à la grille, le tetrino disparait
+            }
         }
         SupprimerLignesPleines();
+
     }
 
 
@@ -279,9 +305,6 @@ public class Tetrino
     // Note : ici on pourrait ne pas créer ce tableau en utilisant tout simplement l'énumération avec des casting depuis des entiers pour la génération aléatoire.
     public static TetrinoCouleur[] CouleursTetrinos = new TetrinoCouleur[Enum.GetValues(typeof(TetrinoCouleur)).Length];
     public TetrinoCouleur Couleur;
-    /*  Création de l'objet random à utiliser pour génerer des nombres aléeatoires.
-        Déclaration de random en tant qu'attribut pour éviter les déclarations inutiles lors de l'appelle de la méthode NouveauTetrino. */
-    private static Random random = new Random();
 
     public Tetrino()
     {
@@ -311,25 +334,6 @@ public class Tetrino
         return positionsAvecOrigine;
     }
 
-    /** Mettre à jour le tetrino en tirant aléatoirement une Indice 
-    du TetrinosTab, une positionOrigine et une Couleur en faisant la vérification du cadre.*/
-    public void NouveauTetrino()
-    {
-        //FIXME: IL FAUT VÉRIFIER S'IL Y A DÉJÀ DES CARRÉS AVANT DE DONNER LA POSITION !!!
-        this.Indice = random.Next(0, TetrinosTab.Length);
-        // Un casting a été utilisé pour définir la couleur à partir du nombre généré. On commence à 2 pour exclure les couleurs noire et blanche.
-        this.Couleur = (TetrinoCouleur)random.Next(2, Enum.GetValues(typeof(TetrinoCouleur)).Length);
-
-        // Ici on cherche l'indice maximale que X peut atteindre en fonction des positions sélectionnées par Indice.
-        int longueurTetrino = 0;
-        Position[] positions = TetrinosTab[this.Indice];
-        for (int i = 0; i < positions.Length; i = i + 1)
-        {
-            if (positions[i].X > longueurTetrino) longueurTetrino = positions[i].X;
-        }
-        int positionOrigineX = random.Next(0, JeuTetris.LargeurGrille - longueurTetrino); // (JeuTetris.LargeurGrille - decalageMax) exclu
-        this.PositionOrigine = new Position(positionOrigineX, 0);
-    }
 
 }
 

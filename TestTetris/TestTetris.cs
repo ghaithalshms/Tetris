@@ -87,12 +87,12 @@ public class TestTetrino
     [Fact]
     public void TestTetrino_NouveauTetrino()
     {
-        Tetrino t = new Tetrino();
+        JeuTetris jeu = new JeuTetris();
 
-        t.NouveauTetrino();
+        jeu.NouveauTetrino();
 
-        Assert.True((int)t.Couleur >= 2);
-        Assert.True((int)t.Couleur < Enum.GetValues(typeof(TetrinoCouleur)).Length);
+        Assert.True((int)jeu.TetrinoCourant.Couleur >= 2);
+        Assert.True((int)jeu.TetrinoCourant.Couleur < Enum.GetValues(typeof(TetrinoCouleur)).Length);
     }
 
 
@@ -118,18 +118,18 @@ public class TestTetrino
     [Fact]
     public void TestTetrino_ValidationBordureDroite()
     {
-        Tetrino t = new Tetrino();
+        JeuTetris jeu = new JeuTetris();
 
         // On lance le test 50 fois pour couvrir les différents cas aléatoires
         for (int i = 0; i < 50; i++)
         {
-            t.NouveauTetrino();
-            Position[] pos = t.Positions();
+            jeu.NouveauTetrino();
+            Position[] pos = jeu.TetrinoCourant.Positions();
 
             foreach (var p in pos)
             {
                 // Le plateau semble être de 12 colonnes (0 à 11)
-                Assert.True(p.X < 12, $"Le tetrino dépasse à droite : X={p.X} pour l'indice {t.Indice}");
+                Assert.True(p.X < 12, $"Le tetrino dépasse à droite : X={p.X} pour l'indice {jeu.TetrinoCourant.Indice}");
                 Assert.True(p.X >= 0, $"Le tetrino dépasse à gauche : X={p.X}");
             }
         }
@@ -169,8 +169,8 @@ public class TestJeuTetris
 
         // Assert
         // On vérifie les valeurs attendues
-        Assert.Equal(12, JeuTetris.LargeurGrille);
-        Assert.Equal(15, JeuTetris.HauteurGrille);
+        Assert.Equal(10, JeuTetris.LargeurGrille);
+        Assert.Equal(20, JeuTetris.HauteurGrille);
 
         // On vérifie que le tétrino courant existe
         Assert.NotNull(jeu.TetrinoCourant);
