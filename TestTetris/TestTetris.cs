@@ -475,7 +475,9 @@ public class TestJeuTetris
     }
 
     // ============================================================
-    // TESTS : LignePleine
+    // TEST 9
+    // Vérifie que LignePleine(y) retourne vrai
+    // quand toute la ligne est remplie
     // ============================================================
     [Fact]
     public void LignePleine_Retourne_True_Si_La_Ligne_Est_Pleine()
@@ -497,6 +499,12 @@ public class TestJeuTetris
         Assert.True(resultat);
     }
 
+
+    // ============================================================
+    // TEST 10
+    // Vérifie que LignePleine(y) retourne faux
+    // si au moins une case de la ligne est blanche
+    // ============================================================
     [Fact]
     public void LignePleine_Retourne_False_Si_Une_Case_Est_Blanche()
     {
