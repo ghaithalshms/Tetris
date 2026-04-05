@@ -474,5 +474,144 @@ public class TestJeuTetris
         Assert.Equal(4, jeu.TetrinoCourant.PositionOrigine.Y);
     }
 
+    // ============================================================
+    // TESTS : LignePleine
+    // ============================================================
+    [Fact]
+    public void LignePleine_Retourne_True_Si_La_Ligne_Est_Pleine()
+    {
+        // Arrange
+        JeuTetris jeu = new JeuTetris();
+        int y = 2;
+
+        // On remplit toute la ligne avec une couleur différente de Blanc
+        for (int x = 0; x < JeuTetris.LargeurGrille; x++)
+        {
+            jeu.Grille[x, y] = TetrinoCouleur.Bleu;
+        }
+
+        // Act
+        bool resultat = jeu.LignePleine(y);
+
+        // Assert
+        Assert.True(resultat);
+    }
+
+    [Fact]
+    public void LignePleine_Retourne_False_Si_Une_Case_Est_Blanche()
+    {
+        // Arrange
+        JeuTetris jeu = new JeuTetris();
+        int y = 3;
+
+        for (int x = 0; x < JeuTetris.LargeurGrille; x++)
+        {
+            jeu.Grille[x, y] = TetrinoCouleur.Rouge;
+        }
+
+        // On vide une case
+        jeu.Grille[4, y] = TetrinoCouleur.Blanc;
+
+        // Act
+        bool resultat = jeu.LignePleine(y);
+
+        // Assert
+        Assert.False(resultat);
+    }
+
+    // ============================================================
+    // TESTS : SupprimerLigne
+    // ============================================================
+    [Fact]
+    public void SupprimerLigne_Decale_Bien_Les_Lignes()
+    {
+        // Arrange
+        JeuTetris jeu = new JeuTetris();
+        int y = 4;
+
+        // On met la ligne du dessus en bleu
+        for (int x = 0; x < JeuTetris.LargeurGrille; x++)
+        {
+            jeu.Grille[x, y - 1] = TetrinoCouleur.Bleu;
+        }
+
+        // Act
+        jeu.SupprimerLigne(y);
+
+        // Assert
+        for (int x = 0; x < JeuTetris.LargeurGrille; x++)
+        {
+            Assert.Equal(TetrinoCouleur.Bleu, jeu.Grille[x, y]);
+        }
+    }
+
+    [Fact]
+    public void SupprimerLigne_Vide_Bien_La_Premiere_Ligne()
+    {
+        // Arrange
+        JeuTetris jeu = new JeuTetris();
+
+        // On remplit la ligne 0
+        for (int x = 0; x < JeuTetris.LargeurGrille; x++)
+        {
+            jeu.Grille[x, 0] = TetrinoCouleur.Rouge;
+        }
+
+        // Act
+        jeu.SupprimerLigne(5);
+
+        // Assert
+        for (int x = 0; x < JeuTetris.LargeurGrille; x++)
+        {
+            Assert.Equal(TetrinoCouleur.Blanc, jeu.Grille[x, 0]);
+        }
+    }
+
+    // ============================================================
+    // TESTS : SupprimerLignesPleines
+    // ============================================================
+    [Fact]
+    public void SupprimerLignesPleines_Supprime_Bien_Une_Ligne_Pleine()
+    {
+        // Arrange
+        JeuTetris jeu = new JeuTetris();
+        int y = JeuTetris.HauteurGrille - 1;
+
+        // On remplit complètement la dernière ligne
+        for (int x = 0; x < JeuTetris.LargeurGrille; x++)
+        {
+            jeu.Grille[x, y] = TetrinoCouleur.Rouge;
+        }
+
+        // Act 
+        jeu.SupprimerLignesPleines();
+
+        // Assert
+        for (int x = 0; x < JeuTetris.LargeurGrille; x++)
+        {
+            Assert.Equal(TetrinoCouleur.Blanc, jeu.Grille[x, y]);
+        }
+    }
+
+    // ============================================================
+    // TESTS : FigerTetrino
+    // ============================================================
+    [Fact]
+    public void FigerTetrino_Colorie_Bien_La_Grille()
+    {
+        // Arrange
+        JeuTetris jeu = new JeuTetris();
+
+        jeu.TetrinoCourant.Indice = 0;
+        jeu.TetrinoCourant.Couleur = TetrinoCouleur.Jaune;
+        jeu.TetrinoCourant.PositionOrigine = new Position(2, 3);
+
+        // Act
+        jeu.FigerTetrino();
+
+        // Assert
+        Assert.Equal(TetrinoCouleur.Jaune, jeu.Grille[2, 3]);
+    }
+
 
 }
