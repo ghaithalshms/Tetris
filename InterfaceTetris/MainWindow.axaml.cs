@@ -150,9 +150,9 @@ public partial class MainWindow : Window
             for (int x = 0; x < JeuTetris.LargeurGrille; x++)
             {
                 // Si la case n'est pas blanche, on dessine un carré de la couleur correspondante
-                if (Jeu.Grille[x, y] != TetrinoCouleur.Blanc)
+                if (JeuTetris.Grille[x, y] != TetrinoCouleur.Blanc)
                 {
-                    DessinerCarre(x, y, Jeu.Grille[x, y]);
+                    DessinerCarre(x, y, JeuTetris.Grille[x, y]);
                 }
             }
         }
@@ -215,13 +215,15 @@ public partial class MainWindow : Window
     /** Fait tourner le Tetrimino vers la droite */
     public void RotationDroiteInterface()
     {
-        Console.WriteLine("Rotation à droit à coder...");
+        Jeu.TetrinoCourant.RotationDroite();
+        DessinerJeu();
     }
 
     /** Fait tourner le Tetrimino vers la gauche */
     public void RotationGaucheInterface()
     {
-        Console.WriteLine("Rotation à gauche à coder...");
+        Jeu.TetrinoCourant.RotationGauche();
+        DessinerJeu();
     }
 
     /** Convertit les couleurs de type enuméré TetrinoCouleur en couleur Avalonia.Media.Brushes.COULEUR
@@ -239,4 +241,3 @@ public partial class MainWindow : Window
         else return Avalonia.Media.Brushes.Red;
     }
 }
-
