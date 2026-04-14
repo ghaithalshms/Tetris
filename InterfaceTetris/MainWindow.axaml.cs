@@ -215,14 +215,14 @@ public partial class MainWindow : Window
     /** Fait tourner le Tetrimino vers la droite */
     public void RotationDroiteInterface()
     {
-        Jeu.TetrinoCourant.RotationDroite();
+        Jeu.RotationDroite();
         DessinerJeu();
     }
 
     /** Fait tourner le Tetrimino vers la gauche */
     public void RotationGaucheInterface()
     {
-        Jeu.TetrinoCourant.RotationGauche();
+        Jeu.RotationGauche();
         DessinerJeu();
     }
 

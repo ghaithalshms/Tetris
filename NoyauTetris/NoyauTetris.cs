@@ -397,6 +397,8 @@ public class Tetrino
                 this.PositionOrigine.X -= 1;
                 this.PositionOrigine.Y += 1;
                 break;
+            default:
+                break;
         }
     }
 
@@ -417,6 +419,8 @@ public class Tetrino
                 this.Indice = 1;
                 this.PositionOrigine.X -= 1;
                 this.PositionOrigine.Y += 1;
+                break;
+            default:
                 break;
         }
     }
