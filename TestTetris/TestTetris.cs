@@ -172,7 +172,7 @@ public class TestJeuTetris
         {
             for (int x = 0; x < JeuTetris.LargeurGrille; x++)
             {
-                Assert.Equal(TetrinoCouleur.Blanc, jeu.Grille[x, y]);
+                Assert.Equal(TetrinoCouleur.Blanc, JeuTetris.Grille[x, y]);
             }
         }
         Assert.NotNull(jeu.TetrinoCourant);
@@ -187,16 +187,16 @@ public class TestJeuTetris
         jeu.TetrinoCourant.PositionOrigine = new Position(0, 0);
 
         // Test bordure gauche
-        Assert.False(jeu.PeutSeDeplacer(-1, 0));
+        Assert.False(jeu.TetrinoCourant.PeutSeDeplacer(-1, 0));
 
         // Test bordure droite
         jeu.TetrinoCourant.PositionOrigine = new Position(JeuTetris.LargeurGrille - 2, 0); //dernière position possible à droite
-        Assert.False(jeu.PeutSeDeplacer(1, 0));
+        Assert.False(jeu.TetrinoCourant.PeutSeDeplacer(1, 0));
 
         // Test collision avec un carré déjà présent dans la grille
         jeu.TetrinoCourant.PositionOrigine = new Position(5, 5);
-        jeu.Grille[5, 6] = TetrinoCouleur.Rouge;
-        Assert.False(jeu.PeutSeDeplacer(0, 1));
+        JeuTetris.Grille[5, 6] = TetrinoCouleur.Rouge;
+        Assert.False(jeu.TetrinoCourant.PeutSeDeplacer(0, 1));
     }
 
     /** On vérifie que les méthodes Droite et Gauche déplacent l'origine du tétrino seulement si le mouvement est valide */
@@ -233,7 +233,7 @@ public class TestJeuTetris
         // Le mouvement est impossible, l'appel à Bas() doit figer le tétrino et en créer un nouveau
         jeu.Bas();
 
-        Assert.Equal(TetrinoCouleur.Bleu, jeu.Grille[0, 19]);
+        Assert.Equal(TetrinoCouleur.Bleu, JeuTetris.Grille[0, 19]);
         // Le Y du nouveau tétrino est initialisé à -1 par NouveauTetrino()
         Assert.Equal(-1, jeu.TetrinoCourant.PositionOrigine.Y);
     }
@@ -247,7 +247,7 @@ public class TestJeuTetris
         // On pré-remplit une ligne presque complète
         for (int x = 1; x < JeuTetris.LargeurGrille; x++)
         {
-            jeu.Grille[x, 19] = TetrinoCouleur.Jaune;
+            JeuTetris.Grille[x, 19] = TetrinoCouleur.Jaune;
         }
 
         // On positionne un tétrino pour compléter la ligne
@@ -258,7 +258,7 @@ public class TestJeuTetris
         jeu.FigerTetrino();
 
         // La ligne 19 étant pleine, elle doit être supprimée (remplacée par la ligne vide du dessus)
-        Assert.Equal(TetrinoCouleur.Blanc, jeu.Grille[1, 19]);
+        Assert.Equal(TetrinoCouleur.Blanc, JeuTetris.Grille[1, 19]);
     }
 
     // ***** Awa *****
@@ -489,7 +489,7 @@ public class TestJeuTetris
         // On remplit toute la ligne avec une couleur différente de Blanc
         for (int x = 0; x < JeuTetris.LargeurGrille; x++)
         {
-            jeu.Grille[x, y] = TetrinoCouleur.Bleu;
+            JeuTetris.Grille[x, y] = TetrinoCouleur.Bleu;
         }
 
         // Act
@@ -514,11 +514,11 @@ public class TestJeuTetris
 
         for (int x = 0; x < JeuTetris.LargeurGrille; x++)
         {
-            jeu.Grille[x, y] = TetrinoCouleur.Rouge;
+            JeuTetris.Grille[x, y] = TetrinoCouleur.Rouge;
         }
 
         // On vide une case
-        jeu.Grille[4, y] = TetrinoCouleur.Blanc;
+        JeuTetris.Grille[4, y] = TetrinoCouleur.Blanc;
 
         // Act
         bool resultat = jeu.LignePleine(y);
@@ -540,7 +540,7 @@ public class TestJeuTetris
         // On met la ligne du dessus en bleu
         for (int x = 0; x < JeuTetris.LargeurGrille; x++)
         {
-            jeu.Grille[x, y - 1] = TetrinoCouleur.Bleu;
+            JeuTetris.Grille[x, y - 1] = TetrinoCouleur.Bleu;
         }
 
         // Act
@@ -549,7 +549,7 @@ public class TestJeuTetris
         // Assert
         for (int x = 0; x < JeuTetris.LargeurGrille; x++)
         {
-            Assert.Equal(TetrinoCouleur.Bleu, jeu.Grille[x, y]);
+            Assert.Equal(TetrinoCouleur.Bleu, JeuTetris.Grille[x, y]);
         }
     }
 
@@ -562,7 +562,7 @@ public class TestJeuTetris
         // On remplit la ligne 0
         for (int x = 0; x < JeuTetris.LargeurGrille; x++)
         {
-            jeu.Grille[x, 0] = TetrinoCouleur.Rouge;
+            JeuTetris.Grille[x, 0] = TetrinoCouleur.Rouge;
         }
 
         // Act
@@ -571,7 +571,7 @@ public class TestJeuTetris
         // Assert
         for (int x = 0; x < JeuTetris.LargeurGrille; x++)
         {
-            Assert.Equal(TetrinoCouleur.Blanc, jeu.Grille[x, 0]);
+            Assert.Equal(TetrinoCouleur.Blanc, JeuTetris.Grille[x, 0]);
         }
     }
 
@@ -588,7 +588,7 @@ public class TestJeuTetris
         // On remplit complètement la dernière ligne
         for (int x = 0; x < JeuTetris.LargeurGrille; x++)
         {
-            jeu.Grille[x, y] = TetrinoCouleur.Rouge;
+            JeuTetris.Grille[x, y] = TetrinoCouleur.Rouge;
         }
 
         // Act 
@@ -597,7 +597,7 @@ public class TestJeuTetris
         // Assert
         for (int x = 0; x < JeuTetris.LargeurGrille; x++)
         {
-            Assert.Equal(TetrinoCouleur.Blanc, jeu.Grille[x, y]);
+            Assert.Equal(TetrinoCouleur.Blanc, JeuTetris.Grille[x, y]);
         }
     }
 
@@ -618,8 +618,137 @@ public class TestJeuTetris
         jeu.FigerTetrino();
 
         // Assert
-        Assert.Equal(TetrinoCouleur.Jaune, jeu.Grille[2, 3]);
+        Assert.Equal(TetrinoCouleur.Jaune, JeuTetris.Grille[2, 3]);
+    }
+
+    // ***** Maël *****
+
+    // =================================================================================
+    // TEST 11
+    // Vérifie que la rotation à droite fonctionne comme prévu
+    // Il passe donc d'horizontal à vertical
+    // =================================================================================
+    [Fact]
+    public void RotationDroite_Passe_De_Horizontal_A_Vertical()
+    {
+        // Arrange
+        JeuTetris jeu = new JeuTetris();
+        Tetrino t = new Tetrino();
+        t.PositionOrigine = new Position(5, 5);
+        t.Indice = 1;
+
+        jeu.TetrinoCourant = t;
+
+        // Act
+        jeu.RotationDroite();
+
+        // Assert
+        Position[] pos = t.Positions();
+
+        // On vérifie que les 4 blocs sont bien alignés verticalement
+        Assert.Equal(pos[0].X, pos[1].X);
+        Assert.Equal(pos[1].X, pos[2].X);
+        Assert.Equal(pos[2].X, pos[3].X);
     }
 
 
+    // ============================================================================================
+    // TEST 12
+    // Vérifie que la rotation à droite puis à gauche le remette à un état initial
+    // Il passe donc d'horizontal à vertical, puis vertical à horizontal, annulant le mouvement
+    // ============================================================================================
+    [Fact]
+    public void RotationDroitePuisGauche_Reviens_Etat_Initial()
+    {
+        // Arrange
+        JeuTetris jeu = new JeuTetris();
+        Tetrino t = new Tetrino();
+        t.PositionOrigine = new Position(5, 5);
+        t.Indice = 1; // barre horizontal
+
+        jeu.TetrinoCourant = t;
+
+        Position[] posInitial = t.Positions();
+
+        // Act
+        // Ça s'annule
+        jeu.RotationDroite();
+        jeu.RotationGauche();
+
+        // Assert
+        Position[] posFinal = t.Positions();
+
+        // Vérifie que tout est revenu à sa position initial
+        for (int i = 0; i < 4; i++)
+        {
+            Assert.Equal(posInitial[i].X, posFinal[i].X);
+            Assert.Equal(posInitial[i].Y, posFinal[i].Y);
+        }
+    }
+
+
+    // ============================================================================================
+    // TEST 13
+    // Vérifie que la rotation à droite ne se fasse pas quand bloqué par un tetrino
+    // ============================================================================================
+    [Fact]
+    public void RotationDroite_Bloquee_Par_Un_Tetrino()
+    {
+        // Arrange
+        JeuTetris jeu = new JeuTetris();
+        Tetrino t = new Tetrino();
+        t.PositionOrigine = new Position(5, 5);
+        t.Indice = 1;
+
+        jeu.TetrinoCourant = t;
+
+        // On sauvegarde la position initiale
+        Position[] posInitial = t.Positions();
+
+        // On fait comme si il y avait un bloc déjà présent
+        // On met (6,4) car après la rotation à droite, l'origine devient (6,4), on sait donc qu'il doit être vide
+        JeuTetris.Grille[6, 4] = TetrinoCouleur.Rouge; // ça peut être n'importe quelle couleur, il faut juste que ce soit un tetrino qui gène
+
+        // Act
+        jeu.RotationDroite();
+
+        // Assert
+        // Le tetrino ne doit pas avoir bougé
+        Position[] posFinal = t.Positions();
+
+        for (int i = 0; i < 4; i++)
+        {
+            Assert.Equal(posInitial[i].X, posFinal[i].X);
+            Assert.Equal(posInitial[i].Y, posFinal[i].Y);
+        }
+    }
+
+    // ==============================================================================================
+    // TEST 14
+    // Vérifie que la rotation ne se fait pas quand trop proche du bord (pour éviter que ça dépasse)
+    // ==============================================================================================
+    [Fact]
+    public void RotationDroite_PresDuBord_NeFaitPasSortirLeTetrino()
+    {
+        // Arrange
+        JeuTetris jeu = new JeuTetris();
+        Tetrino t = new Tetrino();
+        t.PositionOrigine = new Position(0, 5); // collé au bord gauche
+        t.Indice = 1;
+
+        jeu.TetrinoCourant = t;
+
+        // Act
+        jeu.RotationDroite();
+
+        // Assert
+        // Aucun bout de tetrino ne doit déborder de la Grille (X < 0)
+        Position[] pos = t.Positions();
+
+        for (int i = 0; i < 4; i++)
+        {
+            Assert.True(pos[i].X >= 0);
+            Assert.True(pos[i].X < JeuTetris.LargeurGrille);
+        }
+    }
 }

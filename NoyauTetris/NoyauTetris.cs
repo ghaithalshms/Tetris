@@ -259,9 +259,6 @@ public class JeuTetris
 }
 
 
-
-
-
 /** La classe qui définit la position d’un carré à l’aide de
     ses coordonnées X et Y dans le jeu et qui contient des méthodes pour déplacer
     les positions dans les 3 directions (gauche, droite et bas) */

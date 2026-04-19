@@ -1,9 +1,0 @@
- * Membres : ALSHAMAS Ghaith, BARROIS Nathan, DENNEMONT Maël, DIOP Awa.
-
-Awa-public enum TetrinoCouleur
-Ghaith-public IBrush ConvertirCouleur(TetrinoCouleur couleur)
-Nathan-public class JeuTetris
-Ghaith-Calculs TetrisCanvas.Width, TetrisCanvas.Height, Width et Height
-Nathan-public void DessinerCadre()
-Mael-public void DessinerCarre()
-Awa-DemarrerInterface
