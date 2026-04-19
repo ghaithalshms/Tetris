@@ -71,7 +71,6 @@ public class JeuTetris
     du TetrinosTab, une positionOrigine et une Couleur en faisant la vérification du cadre.*/
     public void NouveauTetrino()
     {
-        //FIXME: Il faut vérifier si le tetrino peut loger dans la grille avant d'apparaitre
         this.TetrinoCourant.Indice = random.Next(0, Tetrino.TetrinosTab.Length);
         // Un casting a été utilisé pour définir la couleur à partir du nombre généré. On commence à 2 pour exclure les couleurs noire et blanche.
         this.TetrinoCourant.Couleur = (TetrinoCouleur)random.Next(2, Enum.GetValues(typeof(TetrinoCouleur)).Length);
@@ -89,20 +88,6 @@ public class JeuTetris
         Position origine = new Position(positionOrigineX, -1); //-1 pour que le tetrino qui veut descendre puisse être vérifié s'il le peut 
         this.TetrinoCourant.PositionOrigine = origine;
 
-        /*// Pour savoir si le tetrino peut loger, on va vérifier s'il peut descendre hauteurTetrino fois
-        bool peutLoger = true;
-        for (int i = 1; i <= hauteurTetrino; i++)
-        {
-            if (this.TetrinoCourant.Positions()[i - 1].Y + i < 0 || !PeutSeDeplacer(0, i))
-            {
-                peutLoger = false;
-                break;
-            }
-        }
-        if (!peutLoger)
-        {
-            Console.WriteLine("***** Game Over *****");
-        }*/
     }
 
 
