@@ -376,19 +376,7 @@ public class TestJeuTetris
         // Arrange
         JeuTetris jeu = new JeuTetris();
 
-        // On prépare une forme simple
-        Tetrino.TetrinosTab = new Position[][]
-        {
-            new Position[]
-            {
-                new Position(0, 0),
-                new Position(1, 0),
-                new Position(0, 1),
-                new Position(1, 1)
-            }
-        };
-
-        // On choisit l'indice 0 dans le tableau des formes
+        // on utilise le carré
         jeu.TetrinoCourant.Indice = 0;
 
         // On place l'origine à X = 3
@@ -398,7 +386,7 @@ public class TestJeuTetris
         jeu.Droite();
 
         // Assert
-        // Le tétrino doit avancer d'une case
+        // Le tétrino doit avancer d'une case (3 + 1 = 4)
         Assert.Equal(4, jeu.TetrinoCourant.PositionOrigine.X);
         Assert.Equal(0, jeu.TetrinoCourant.PositionOrigine.Y);
     }
