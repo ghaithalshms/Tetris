@@ -3,7 +3,7 @@
  * l'ensemble des interactions du jeu.
  * Auteur : Groupe 5.
  * Membres : ALSHAMAS Ghaith, BARROIS Nathan, DENNEMONT Maël, DIOP Awa.
- * Version : 1.3
+ * Version : 1.5
  */
 
 using Avalonia;
@@ -39,7 +39,7 @@ public partial class MainWindow : Window
 
         InitializeComponent();
         // Définit le texte de InfoText
-        InfoText.Text = "Zone texte";
+        InfoText.Text = $"Score : {Jeu.Score}";
 
         // Défini la taille du canvas à partir des constantes
         TetrisCanvas.Width = JeuTetris.LargeurGrille * TailleCarre + TailleBordures * 2; //+TailleBordures*2 pour les bordures noires : TailleBordures à gauche et TailleBordures à droite
@@ -58,7 +58,8 @@ public partial class MainWindow : Window
 
         // Initialise le minuteur pour faire descendre le tetrino courant toutes les 500 milisecondes
         Minuteur = new DispatcherTimer();
-        Minuteur.Interval = TimeSpan.FromMilliseconds(500);
+        // initialisez=r la durée du minuteur à 1024 millisecondes
+        Minuteur.Interval = TimeSpan.FromMilliseconds(1024);
         Minuteur.Tick += (s, e) => { BasInterface(); };
 
         // détecte le clic sur le bouton Démarrer, déclanche l'évènement Demarrer, puis appelle la méthode DemarrerTetris
@@ -138,11 +139,18 @@ public partial class MainWindow : Window
     /** Réinitialisation du cadre et dessiner le TetrinoCourant et la Grille */
     public void DessinerJeu()
     {
+        // Mettre à jour le score
+        if (!Jeu.Perdu)
+        {
+            InfoText.Text = $"Score : {Jeu.Score}";
+        }
+
         // Supprime le cadre et son contenu, une sorte de reset
         TetrisCanvas.Children.Clear();
 
         // Recréer le cadre pour le rafraichir
         DessinerCadre();
+
 
         // Dessiner la grille (les tétrinos figés)
         for (int y = 0; y < JeuTetris.HauteurGrille; y++)
@@ -150,9 +158,9 @@ public partial class MainWindow : Window
             for (int x = 0; x < JeuTetris.LargeurGrille; x++)
             {
                 // Si la case n'est pas blanche, on dessine un carré de la couleur correspondante
-                if (JeuTetris.Grille[x, y] != TetrinoCouleur.Blanc)
+                if (Jeu.Grille[x, y] != TetrinoCouleur.Blanc)
                 {
-                    DessinerCarre(x, y, JeuTetris.Grille[x, y]);
+                    DessinerCarre(x, y, Jeu.Grille[x, y]);
                 }
             }
         }
@@ -169,6 +177,8 @@ public partial class MainWindow : Window
                 DessinerCarre(pos.X, pos.Y, Jeu.TetrinoCourant.Couleur);
             }
         }
+
+
     }
 
     /** Lance le jeu :
@@ -176,6 +186,9 @@ public partial class MainWindow : Window
        - démarre le minuteur */
     public void DemarrerInterface()
     {
+        // Réinitaliser le le minuteur
+        Minuteur.Interval = TimeSpan.FromMilliseconds(1024);
+
         Jeu = new JeuTetris();   // reset jeu
         Jeu.Demarrer();          // lance le jeu
         Minuteur.Start();        // démarre le timer
@@ -202,6 +215,24 @@ public partial class MainWindow : Window
     {
         Jeu.Bas();
         DessinerJeu();
+
+        // Mis ici car BasInterface est l'événemmet du minuteur
+
+        // diviser la durée du minuteur par 2
+        if (Jeu.NombreTetrinosApparus != 0 && Jeu.NombreTetrinosApparus % 10 == 0)
+        {
+            int actuelle = (int)Minuteur.Interval.TotalMilliseconds;
+            // pour que la durée ne soit pas moins que 64ms
+            int nouvelleDuree = (actuelle >= 128) ? actuelle / 2 : actuelle;
+            Minuteur.Interval = TimeSpan.FromMilliseconds(nouvelleDuree);
+        }
+
+        // arrêter le jeu si perdu
+        if (Jeu.Perdu)
+        {
+            Minuteur.Stop();
+            InfoText.Text = $"Game Over, score : {Jeu.Score}";
+        }
     }
 
     /** Fait descendre rapidement le Tetrimino jusqu'en bas */

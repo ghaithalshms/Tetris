@@ -24,9 +24,21 @@ public class JeuTetris
 {
     public static int LargeurGrille;
     public static int HauteurGrille;
+
+    /** Le tétrino actuellement contrôlé par le joueur */
     public Tetrino TetrinoCourant;
-    // La grille qui représante les tetrinos figés : true s'il y a un carré, false sinon.
-    public static TetrinoCouleur[,] Grille = new TetrinoCouleur[LargeurGrille, HauteurGrille];
+
+    /** Indique si la partie est terminée */
+    public bool Perdu;
+
+    /** Le nombre total de tétrinos générés depuis le début de la partie */
+    public int NombreTetrinosApparus;
+
+    /** Le score actuel du joueur (basé sur les lignes supprimées) */
+    public int Score;
+
+    /** La matrice représentant l'état fixe de la grille de jeu */
+    public TetrinoCouleur[,] Grille;
     /*  Création de l'objet random à utiliser pour génerer des nombres aléeatoires.
     Déclaration de random en tant qu'attribut pour éviter les déclarations inutiles lors de l'appelle de la méthode NouveauTetrino. */
     private static Random random = new Random();
@@ -39,7 +51,7 @@ public class JeuTetris
         TetrinoCourant = new Tetrino();
         // Le tableau est 2 dimensionnel : il contient LargeurGrille colonnes et HauteurGrille lignes
         // 'new bool[x, y]' crée un tableau rempli de 'false' par défaut
-        Grille = new TetrinoCouleur[LargeurGrille, HauteurGrille];
+        this.Grille = new TetrinoCouleur[LargeurGrille, HauteurGrille];
         // Le tableau ne contient que des carrés blancs
         for (int y = 0; y < HauteurGrille; y++)
         {
@@ -53,10 +65,11 @@ public class JeuTetris
     /** Initialise le jeu avec un nouvau tetrino */
     public void Demarrer()
     {
-        // Pour demarrer on a besoin d'un nouveau tetrino
-        this.NouveauTetrino();
+        Perdu = false;
+        NombreTetrinosApparus = 0;
+        Score = 0;
         // réinitialiser la grille 
-        Grille = new TetrinoCouleur[LargeurGrille, HauteurGrille];
+        this.Grille = new TetrinoCouleur[LargeurGrille, HauteurGrille];
         for (int y = 0; y < HauteurGrille; y++)
         {
             for (int x = 0; x < LargeurGrille; x++)
@@ -64,7 +77,10 @@ public class JeuTetris
                 Grille[x, y] = TetrinoCouleur.Blanc;
             }
         }
+        // Pour demarrer on a besoin d'un nouveau tetrino
+        this.NouveauTetrino();
     }
+
 
 
     /** Mettre à jour le tetrino en tirant aléatoirement une Indice 
@@ -88,61 +104,103 @@ public class JeuTetris
         Position origine = new Position(positionOrigineX, -1); //-1 pour que le tetrino qui veut descendre puisse être vérifié s'il le peut 
         this.TetrinoCourant.PositionOrigine = origine;
 
+        NombreTetrinosApparus++;
+
+        foreach (Position pos in this.TetrinoCourant.Positions())
+        {
+            // si le tetrino ne peut pas apparaître, le jeu est fini
+            if (pos.Y >= 0 && Grille[pos.X, pos.Y] != TetrinoCouleur.Blanc)
+            {
+                Perdu = true;
+                return;
+            }
+
+        }
     }
 
+    /** Vérifier si le tetrino peut se déplacer, créée pour ne pas répeter le code dans les méthodes Droite, Gauche et Bas */
+    public bool PeutSeDeplacer(int dx, int dy)
+    {
+        foreach (Position pos in this.TetrinoCourant.Positions())
+        {
+            int x = pos.X + dx;
+            int y = pos.Y + dy;
 
+            // Sortie à gauche ou à droite ou en bas
+            if (x < 0 || x >= LargeurGrille || y >= HauteurGrille)
+            {
+                return false;
+            }
+            // y < 0 autorisé tant que la pièce est encore en haut pour l'effet descente 
+
+            if (y >= 0)
+            {
+                // s'il y a déjà un tétrino, on ne doit pas l'écraser
+                if (Grille[x, y] != TetrinoCouleur.Blanc)
+                {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
 
     /** Déplace d'une case vers la droite avec vérification cadre et grille */
     public void Droite()
     {
-        if (this.TetrinoCourant.PeutSeDeplacer(1, 0)) this.TetrinoCourant.PositionOrigine.X += 1;
+        if (PeutSeDeplacer(1, 0)) this.TetrinoCourant.PositionOrigine.X += 1;
     }
 
     /** Déplace d'une case vers la gauche avec vérification cadre et grille */
     public void Gauche()
     {
-        if (this.TetrinoCourant.PeutSeDeplacer(-1, 0)) this.TetrinoCourant.PositionOrigine.X -= 1;
+        if (PeutSeDeplacer(-1, 0)) this.TetrinoCourant.PositionOrigine.X -= 1;
     }
 
 
     /** Déplace d'une case vers le bas avec vérification, s'il ne peut plus descendre, le fige dans la grille, et enfin en crée un nouveau */
+
     public void Bas()
     {
-        if (this.TetrinoCourant.PeutSeDeplacer(0, 1))
+        if (Perdu) return;
+        if (PeutSeDeplacer(0, 1))
         {
             TetrinoCourant.PositionOrigine.Y += 1;
         }
         else
         {
-            this.FigerTetrino();
-            this.TetrinoCourant = new Tetrino();
-            this.NouveauTetrino();
+            FigerTetrino();
+            NouveauTetrino();
         }
     }
+
 
     /** Fait tomber le tetrino jusqu'en bas, le fige dans la grille, et enfin en crée un nouveau */
     public void Tombe()
     {
-        while (this.TetrinoCourant.PeutSeDeplacer(0, 1))
+        if (Perdu) return;
+        while (PeutSeDeplacer(0, 1))
         {
             TetrinoCourant.PositionOrigine.Y += 1;
         }
-        this.FigerTetrino();
-        this.TetrinoCourant = new Tetrino();
-        this.NouveauTetrino();
+
+        FigerTetrino();
+        NouveauTetrino();
     }
 
     /** Retourne true ou false, vérifie si la ligne est pleine.  */
 
-    public bool LignePleine(int ligne)
+    public bool LignePleine(int y)
     {
         for (int x = 0; x < LargeurGrille; x++)
         {
-            if (Grille[x, ligne] == TetrinoCouleur.Blanc)
+            if (Grille[x, y] == TetrinoCouleur.Blanc)
             {
                 return false;
             }
         }
+
         return true;
     }
 
@@ -161,6 +219,9 @@ public class JeuTetris
         {
             Grille[x, 0] = TetrinoCouleur.Blanc;
         }
+
+        // Ajouter 100 au Score
+        this.Score += 100;
     }
 
     /** On efface les lignes pleines. */
@@ -176,15 +237,16 @@ public class JeuTetris
         }
     }
 
+    /** Fige les carrés du tétrino actuel dans la grille de jeu.
+        Vérifie si la pièce dépasse des limites (jeu perdu) et lance la suppression des lignes pleines. */
     public void FigerTetrino()
     {
         /* On fait le contrôle en commençant par la fin 
-         pour savoir s'il va avoir un carré qui ne vas pas loger dans la grille */
-
-        for (int i = Tetrino.TetrinosTab[this.TetrinoCourant.Indice].Length - 1; i >= 0; i--)
-        // foreach (Position pos in Tetrino.TetrinosTab[this.TetrinoCourant.Indice])
+        pour savoir s'il va avoir un carré qui ne vas pas loger dans la grille */
+        for (int i = 0; i < Tetrino.TetrinosTab[TetrinoCourant.Indice].Length; i++)
         {
-            Position pos = Tetrino.TetrinosTab[this.TetrinoCourant.Indice][i];
+            Position pos = Tetrino.TetrinosTab[TetrinoCourant.Indice][i];
+
             int x = TetrinoCourant.PositionOrigine.X + pos.X;
             int y = TetrinoCourant.PositionOrigine.Y + pos.Y;
 
@@ -195,52 +257,51 @@ public class JeuTetris
             }
             else
             {
-                Console.WriteLine("***** Game Over *****");
-                break; // si un carré est hors cadre, aucun carré ne sera ajouté à la grille, le tetrino disparait
+                // si le tetrino ne peut pas etre figé, alors le jeu est fini
+                this.Perdu = true;
             }
+
         }
+
         SupprimerLignesPleines();
-
     }
-
-
     /** Effectuer une rotation à droite si possible, en appellant la méthode RotationDroite de la classe Tetrino */
     public void RotationDroite()
     {
         int ancienIndice = TetrinoCourant.Indice;
         Position anciennePosition = new Position(
-            this.TetrinoCourant.PositionOrigine.X,
-            this.TetrinoCourant.PositionOrigine.Y
+            TetrinoCourant.PositionOrigine.X,
+            TetrinoCourant.PositionOrigine.Y
         );
 
-        this.TetrinoCourant.RotationDroite();
+        TetrinoCourant.RotationDroite();
 
-        if (!this.TetrinoCourant.PeutSeDeplacer(0, 0))
+        if (!PeutSeDeplacer(0, 0))
         {
-            this.TetrinoCourant.Indice = ancienIndice;
-            this.TetrinoCourant.PositionOrigine.X = anciennePosition.X;
-            this.TetrinoCourant.PositionOrigine.Y = anciennePosition.Y;
+            TetrinoCourant.Indice = ancienIndice;
+            TetrinoCourant.PositionOrigine.X = anciennePosition.X;
+            TetrinoCourant.PositionOrigine.Y = anciennePosition.Y;
         }
     }
-
     /** Effectuer une rotation à gauche si possible, en appellant la méthode RotationGauche de la classe Tetrino */
     public void RotationGauche()
     {
         int ancienIndice = TetrinoCourant.Indice;
         Position anciennePosition = new Position(
-            this.TetrinoCourant.PositionOrigine.X,
-            this.TetrinoCourant.PositionOrigine.Y
+            TetrinoCourant.PositionOrigine.X,
+            TetrinoCourant.PositionOrigine.Y
         );
 
-        this.TetrinoCourant.RotationGauche();
+        TetrinoCourant.RotationGauche();
 
-        if (!this.TetrinoCourant.PeutSeDeplacer(0, 0))
+        if (!PeutSeDeplacer(0, 0))
         {
-            this.TetrinoCourant.Indice = ancienIndice;
-            this.TetrinoCourant.PositionOrigine.X = anciennePosition.X;
-            this.TetrinoCourant.PositionOrigine.Y = anciennePosition.Y;
+            TetrinoCourant.Indice = ancienIndice;
+            TetrinoCourant.PositionOrigine.X = anciennePosition.X;
+            TetrinoCourant.PositionOrigine.Y = anciennePosition.Y;
         }
     }
+
 }
 
 
@@ -251,6 +312,8 @@ public class Position
 {
     public int X;
     public int Y;
+
+    /** Initialise une nouvelle instance de Position avec des coordonnées X et Y */
     public Position(int x, int y)
     {
         this.X = x;
@@ -280,7 +343,8 @@ public class Position
 /** La classe qui représante un tetrino par 4 carées (avec leur représentation par la classe Position) */
 public class Tetrino
 {
-    // Liste des positions des carrées qui construisent les tetrinos : carré, barre horizontale et barre verticale.
+
+    /** Tableau statique contenant les modèles de formes pour chaque type de tetrino */
     public static Position[][] TetrinosTab = new Position[][]
     {
         // Carré
@@ -297,6 +361,47 @@ public class Tetrino
         new Position[]
         {
             new Position(0,0), new Position(0,-1),new Position(0,-2),new Position(0,-3)
+        },
+        // Barre s
+           new Position[]
+        {
+            new Position(0,0), new Position(0,-1),new Position(1,-1),new Position(1,-2)
+        },
+       
+        // Barre s horizontale gauche
+         new Position[]
+        {
+            new Position(0,0), new Position(1,0),new Position(1,-1),new Position(2,-1),
+        },
+        // Barre s horizontale droite
+        new Position[]
+        {
+            new Position(1,0), new Position(2,0),new Position(0,-1),new Position(1,-1)
+        },
+        // Barre s verticale
+        new Position[]
+        {
+            new Position(1,0), new Position(0,-1),new Position(1,-1),new Position(0,-2)
+        },
+         //Barre T
+           new Position[]
+        {
+            new Position(0,-1), new Position(1,-1),new Position(2,-1),new Position(1,0)
+        },
+        // Barre T droite
+           new Position[]
+        {
+             new Position(0,0), new Position(0,-1),new Position(0,-2),new Position(1,-1)
+        },
+        //Barre T  renversé
+           new Position[]
+        {
+            new Position(0,0), new Position(1,0),new Position(2,0),new Position(1,-1)
+        },
+        //Barre T  gauche
+           new Position[]
+        {
+             new Position(1,0), new Position(1,-1),new Position(1,-2),new Position(0,-1)
         }
     };
 
@@ -311,6 +416,7 @@ public class Tetrino
     public static TetrinoCouleur[] CouleursTetrinos = new TetrinoCouleur[Enum.GetValues(typeof(TetrinoCouleur)).Length];
     public TetrinoCouleur Couleur;
 
+    /** Initialise un tétrino par défaut (carré rouge en haut à gauche) */
     public Tetrino()
     {
         // Remplissage du tableau CouleursTetrinos avec un casting
@@ -339,74 +445,158 @@ public class Tetrino
         return positionsAvecOrigine;
     }
 
-    /** Vérifier si le tetrino peut se déplacer, créée pour ne pas répeter le code dans les méthodes Droite, Gauche et Bas */
-    public bool PeutSeDeplacer(int deltaX, int deltaY)
-    {
-        foreach (Position p in this.Positions())
-        {
-            int nouveauX = p.X + deltaX;
-            int nouveauY = p.Y + deltaY;
-
-            // Vérifier les bordures
-            if (nouveauX < 0 || nouveauX >= JeuTetris.LargeurGrille || nouveauY >= JeuTetris.HauteurGrille)
-                return false;
-
-            // Vérifier la collision avec les tetrinos figés (si on est dans la grille, pas au dessus)
-            if (nouveauY >= 0 && JeuTetris.Grille[nouveauX, nouveauY] != TetrinoCouleur.Blanc)
-                return false;
-        }
-        return true;
-    }
-
-
-    /** Effectue une rotation vers la droite en mettant à jour l'indice et l'origine */
+    /** Effectue une rotation de 90° vers la droite en modifiant l'indice et l'origine */
     public void RotationDroite()
     {
-        // Mise à jour de l'indice (changement de forme)
-        switch (this.Indice)
+        // Indice 0 = le carré donc on ne fait rien.
+        if (Indice == 0) return;
+
+        else if (Indice == 1) // Horizontale -> Verticale
         {
-            case 0: // Carré : ne change pas
-                break;
-            case 1: // Barre H -> Barre V
-                this.Indice = 2;
-                // Décalage spécifique pour la barre (+1, -1) 
-                this.PositionOrigine.X += 1;
-                this.PositionOrigine.Y -= 1;
-                break;
-            case 2: // Barre V -> Barre H
-                this.Indice = 1;
-                // Inverse du décalage pour la réversibilité (-1, +1) 
-                this.PositionOrigine.X -= 1;
-                this.PositionOrigine.Y += 1;
-                break;
-            default:
-                break;
+            Indice = 2;
+            PositionOrigine.X += 1;
+            PositionOrigine.Y -= 1;
+        }
+        else if (Indice == 2) // Verticale -> Horizontale
+        {
+            Indice = 1;
+            PositionOrigine.X -= 1;
+            PositionOrigine.Y += 1;
+        }
+
+        else if (Indice == 3) // S vertical -> S horizontal 
+        {
+            Indice = 5;
+            PositionOrigine.X -= 1;
+            PositionOrigine.Y += 1;
+        }
+        else if (Indice == 5) // S horizontal -> S vertical 
+        {
+            Indice = 3;
+            PositionOrigine.X += 1;
+            PositionOrigine.Y -= 1;
+        }
+        else if (Indice == 4) // S horizontal -> S vertical 
+        {
+            Indice = 6;
+            PositionOrigine.X += 1;
+            PositionOrigine.Y -= 1;
+        }
+        else if (Indice == 6) // S vertical -> S horizontal 
+        {
+            Indice = 4;
+            PositionOrigine.X -= 1;
+            PositionOrigine.Y += 1;
+        }
+
+        else if (Indice == 7) // T pointe en bas -> T pointe à droite
+        {
+            Indice = 8;
+            PositionOrigine.X -= 1;
+            PositionOrigine.Y += 1;
+        }
+        else if (Indice == 8) // T pointe à droite -> T pointe en haut (renversé)
+        {
+            Indice = 9;
+            PositionOrigine.X += 1;
+            PositionOrigine.Y -= 1;
+        }
+        else if (Indice == 9) // T pointe en haut -> T pointe à gauche
+        {
+            Indice = 10;
+            PositionOrigine.X -= 1;
+            PositionOrigine.Y += 1;
+        }
+        else if (Indice == 10) // T pointe à gauche -> T pointe en bas
+        {
+            Indice = 7;
+            PositionOrigine.X += 1;
+            PositionOrigine.Y -= 1;
         }
     }
 
-    /** Effectue une rotation vers la gauche (l'inverse strict de la droite) */
+    /** Effectue une rotation de 90° vers la gauche en modifiant l'indice et l'origine */
     public void RotationGauche()
     {
-        // Mise à jour de l'indice (changement de forme)
-        switch (this.Indice)
+        if (Indice == 0)
         {
-            case 0: // Carré
-                break;
-            case 1: // Barre H -> Barre V 
-                this.Indice = 2;
-                this.PositionOrigine.X += 1;
-                this.PositionOrigine.Y -= 1;
-                break;
-            case 2: // Barre V -> Barre H 
-                this.Indice = 1;
-                this.PositionOrigine.X -= 1;
-                this.PositionOrigine.Y += 1;
-                break;
-            default:
-                break;
+            // Carré : aucune rotation utile
+            return;
+        }
+
+        else if (Indice == 1)
+        {
+            // Barre horizontale -> barre verticale
+            Indice = 2;
+            PositionOrigine.X += 1;
+            PositionOrigine.Y -= 1;
+        }
+        else if (Indice == 2)
+        {
+            // Barre verticale -> barre horizontale
+            Indice = 1;
+            PositionOrigine.X -= 1;
+            PositionOrigine.Y += 1;
+        }
+        else if (Indice == 3)
+        {
+            // S vertical -> S horizontal
+            Indice = 4;
+            PositionOrigine.X -= 1;
+            PositionOrigine.Y += 1;
+        }
+        else if (Indice == 4)
+        {
+            // S horizontal -> S vertical
+            Indice = 3;
+            PositionOrigine.X += 1;
+            PositionOrigine.Y -= 1;
+        }
+        else if (Indice == 5)
+        {
+            // S horizontal -> S vertical
+            Indice = 6;
+            PositionOrigine.X -= 1;
+            PositionOrigine.Y += 1;
+        }
+        else if (Indice == 6)
+        {
+            // S vertical -> S horizontal
+            Indice = 5;
+            PositionOrigine.X += 1;
+            PositionOrigine.Y -= 1;
+        }
+
+        else if (Indice == 7)
+        {
+            // T pointe en bas -> T pointe à gauche
+            Indice = 10;
+            PositionOrigine.X -= 1;
+            PositionOrigine.Y += 1;
+        }
+
+
+        else if (Indice == 8)
+        {
+            // T pointe à droite -> T pointe en bas 
+            Indice = 7;
+            PositionOrigine.X += 1;
+            PositionOrigine.Y -= 1;
+        }
+        else if (Indice == 9)
+        {
+            // T pointe en haut -> T pointe à droite
+            Indice = 8;
+            PositionOrigine.X -= 1;
+            PositionOrigine.Y += 1;
+        }
+        else if (Indice == 10)
+        {
+            // T pointe à gauche -> T pointe en haut (renversé)
+            Indice = 9;
+            PositionOrigine.X += 1;
+            PositionOrigine.Y -= 1;
         }
     }
 
-
 }
-
